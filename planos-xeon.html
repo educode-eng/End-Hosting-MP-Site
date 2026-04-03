@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="theme-color" content="#0f0a1f"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Planos Xeon — Hospedagem Minecraft Barata no Brasil | End Hosting</title>
+  <meta name="description" content="Hospedagem de servidor Minecraft com Intel Xeon no Brasil. Melhor custo-benefício, DDoS 500 Gbps, deploy em 2s e NVMe incluído. Planos a partir de R$ 19,90/mês."/>
+  <meta name="keywords" content="hospedagem minecraft barata, servidor xeon minecraft, servidor minecraft brasil, end hosting xeon, minecraft barato"/>
+  <link rel="canonical" href="https://endhosting.com.br/planos-xeon.html"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+  <div id="scroll-bar" aria-hidden="true"></div>
+
+<nav class="nav" role="navigation" aria-label="Navegação principal">
+  <div class="nav-inner">
+
+    <!-- Logo -->
+    <a href="index.html" class="nav-logo" aria-label="End Hosting – Página inicial">
+      <div class="nav-logo-mark" aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/>
+          <line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/>
+        </svg>
+      </div>
+      <span class="nav-logo-text">End<span class="accent">Hosting</span></span>
+    </a>
+
+    <!-- Desktop links -->
+    <ul class="nav-links" role="list">
+      <li>
+        <a href="index.html" class="nav-link">Início</a>
+      </li>
+
+      <!-- Dropdown: Hospedagem de Minecraft -->
+      <li class="nav-dropdown">
+        <a href="minecraft.html" class="nav-link" tabindex="0" aria-haspopup="true" aria-expanded="false">
+          Minecraft
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </a>
+        <div class="dropdown-menu" role="menu">
+          <a href="minecraft.html" class="dropdown-item" role="menuitem">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Escolher Plano
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="planos-xeon.html" class="dropdown-item" role="menuitem">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3M3 3l18 0 0 18H3z"/></svg>
+            Planos Xeon
+          </a>
+          <a href="planos-ryzen7.html" class="dropdown-item" role="menuitem">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+            Planos Ryzen 7
+          </a>
+        </div>
+      </li>
+
+      <li><a href="sobre.html" class="nav-link">Sobre</a></li>
+      <li><a href="faq.html"   class="nav-link">FAQ</a></li>
+    </ul>
+
+    <!-- Actions -->
+    <div class="nav-actions">
+      <button class="theme-btn" onclick="toggleTheme()" aria-label="Alternar tema">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+
+      <a href="https://discord.gg/endhosting" target="_blank" rel="noopener" class="btn-discord" aria-label="Entrar no Discord da End Hosting">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.3 4.4A19.2 19.2 0 0 0 15.6 3c-.2.4-.5 1-.7 1.4a17.8 17.8 0 0 0-5.8 0C8.9 4 8.5 3.4 8.3 3A19 19 0 0 0 3.7 4.4C.5 9.4-.3 14.2.1 18.9a19.4 19.4 0 0 0 6 3c.5-.7 1-1.4 1.3-2.2-.7-.3-1.4-.6-2-1l.5-.4c3.8 1.8 8 1.8 11.8 0l.5.4c-.7.4-1.3.8-2 1 .3.8.8 1.5 1.3 2.2 2.2-.7 4.3-1.8 6-3 .5-5.4-.9-10.1-3.2-14.5zM8 15.5c-1.3 0-2.3-1.2-2.3-2.6 0-1.4 1-2.6 2.3-2.6s2.3 1.1 2.3 2.6c0 1.4-1 2.6-2.3 2.6zm7.9 0c-1.3 0-2.3-1.2-2.3-2.6 0-1.4 1-2.6 2.3-2.6s2.3 1.1 2.3 2.6c0 1.4-1 2.6-2.3 2.6z"/></svg>
+        Discord
+      </a>
+
+      <a href="minecraft.html" class="btn btn-primary btn-sm">Criar Servidor</a>
+
+      <button class="hamburger" aria-expanded="false" aria-label="Abrir menu" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Menu mobile">
+    <a href="index.html"         class="nav-link">Início</a>
+
+    <div class="nav-link" style="cursor:default;opacity:0.55;font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;font-family:'JetBrains Mono',monospace;padding:10px 16px 4px;">
+      Minecraft
+    </div>
+    <div class="mobile-sub">
+      <a href="minecraft.html"     class="nav-link">Escolher Plano</a>
+      <a href="planos-xeon.html"   class="nav-link">Planos Xeon</a>
+      <a href="planos-ryzen7.html" class="nav-link">Planos Ryzen 7</a>
+    </div>
+
+    <div class="mobile-menu-divider"></div>
+    <a href="sobre.html"           class="nav-link">Sobre</a>
+    <a href="faq.html"             class="nav-link">FAQ</a>
+
+    <a href="https://discord.gg/endhosting" target="_blank" rel="noopener" class="btn-discord">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.3 4.4A19.2 19.2 0 0 0 15.6 3c-.2.4-.5 1-.7 1.4a17.8 17.8 0 0 0-5.8 0C8.9 4 8.5 3.4 8.3 3A19 19 0 0 0 3.7 4.4C.5 9.4-.3 14.2.1 18.9a19.4 19.4 0 0 0 6 3c.5-.7 1-1.4 1.3-2.2-.7-.3-1.4-.6-2-1l.5-.4c3.8 1.8 8 1.8 11.8 0l.5.4c-.7.4-1.3.8-2 1 .3.8.8 1.5 1.3 2.2 2.2-.7 4.3-1.8 6-3 .5-5.4-.9-10.1-3.2-14.5zM8 15.5c-1.3 0-2.3-1.2-2.3-2.6 0-1.4 1-2.6 2.3-2.6s2.3 1.1 2.3 2.6c0 1.4-1 2.6-2.3 2.6zm7.9 0c-1.3 0-2.3-1.2-2.3-2.6 0-1.4 1-2.6 2.3-2.6s2.3 1.1 2.3 2.6c0 1.4-1 2.6-2.3 2.6z"/></svg>
+      Entrar no Discord
+    </a>
+  </nav>
+</nav>
+
+  <!-- ════════════════════════════════════════
+       PAGE HEADER
+  ════════════════════════════════════════ -->
+  <header class="page-header" aria-labelledby="page-h1">
+    <div class="container">
+      <span class="label">Servidores Intel Xeon</span>
+      <h1 id="page-h1">Hospedagem Minecraft <em>barata</em><br>com qualidade premium</h1>
+      <p>Hardware Intel Xeon dedicado, data center no Brasil e NVMe incluído — tudo isso a partir de R$&nbsp;19,90/mês. Custo-benefício incomparável para quem está começando ou quer estabilidade máxima.</p>
+    </div>
+  </header>
+
+  <!-- ════════════════════════════════════════
+       HARDWARE CARD
+  ════════════════════════════════════════ -->
+  <section class="section-sm" aria-labelledby="hw-title">
+    <div class="container">
+      <div class="hw-card fade-up">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;" class="hw-2col">
+
+          <div>
+            <div class="hw-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3M3 3l18 0 0 18H3z"/></svg>
+              Especificações · Data Center BR
+            </div>
+            <h2 id="hw-title" style="font-size:1.45rem;margin-bottom:12px;">Intel Xeon E-2300 Series</h2>
+            <p style="color:var(--text-secondary);font-size:0.92rem;line-height:1.75;margin-bottom:20px;">
+              Processadores Intel Xeon de última geração com memória ECC DDR4, armazenamento NVMe ultrarrápido e uplink dedicado de 10 Gbps — tudo em um data center certificado no Brasil.
+            </p>
+            <div class="perf-wrap" style="max-width:380px;">
+              <div class="perf-row">
+                <span class="perf-lbl">Estabilidade</span>
+                <div class="perf-outer"><div class="perf-inner perf-inner-a" style="width:96%"></div></div>
+                <span class="perf-score" style="color:var(--blue-light)">96</span>
+              </div>
+              <div class="perf-row">
+                <span class="perf-lbl">Multi-core</span>
+                <div class="perf-outer"><div class="perf-inner perf-inner-a" style="width:88%"></div></div>
+                <span class="perf-score" style="color:var(--blue-light)">88</span>
+              </div>
+              <div class="perf-row">
+                <span class="perf-lbl">Single-thread</span>
+                <div class="perf-outer"><div class="perf-inner perf-inner-a" style="width:74%"></div></div>
+                <span class="perf-score" style="color:var(--blue-light)">74</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hw-grid">
+            <div class="hw-item"><div class="hw-val">Xeon E-2300</div><div class="hw-key">Processador</div></div>
+            <div class="hw-item"><div class="hw-val">DDR4 ECC</div><div class="hw-key">Tipo de RAM</div></div>
+            <div class="hw-item"><div class="hw-val">NVMe SSD</div><div class="hw-key">Armazenamento</div></div>
+            <div class="hw-item"><div class="hw-val">500 Gbps</div><div class="hw-key">Proteção DDoS</div></div>
+            <div class="hw-item"><div class="hw-val">10 Gbps</div><div class="hw-key">Uplink</div></div>
+            <div class="hw-item"><div class="hw-val">São Paulo — BR</div><div class="hw-key">Localização</div></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       PLANS
+  ════════════════════════════════════════ -->
+  <section class="section" style="background:var(--bg-surface)" aria-labelledby="plans-h2">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="label">Planos Xeon</span>
+        <h2 id="plans-h2">Escolha o plano ideal</h2>
+        <p>Todos incluem proteção DDoS, backups automáticos, painel Pterodactyl e suporte 24/7 em português. Deploy em menos de 2 segundos após o pagamento.</p>
+      </div>
+
+      <div class="plans-grid stagger">
+
+        <!-- Starter -->
+        <div class="plan-card">
+          <div class="plan-type">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3"/></svg>
+            Xeon Starter
+          </div>
+          <div class="plan-name">Starter</div>
+          <div class="plan-tag">Para começar sua aventura Minecraft</div>
+          <div class="plan-price">
+            <span class="curr">R$</span>
+            <span class="amt">19</span>
+            <span class="per">,90/mês</span>
+          </div>
+          <div class="plan-specs">
+            <div class="spec-row"><span class="spec-k">RAM</span>   <span class="spec-v">2 GB DDR4 ECC</span></div>
+            <div class="spec-row"><span class="spec-k">CPU</span>   <span class="spec-v">Xeon · 2 vCPU</span></div>
+            <div class="spec-row"><span class="spec-k">Disco</span> <span class="spec-v">15 GB NVMe</span></div>
+            <div class="spec-row"><span class="spec-k">Players</span><span class="spec-v">até 20</span></div>
+            <div class="spec-row"><span class="spec-k">Rede</span>  <span class="spec-v">Ilimitada</span></div>
+          </div>
+          <ul class="plan-features" aria-label="Recursos incluídos">
+            <li class="plan-feat"><span class="chk" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>DDoS Protection 500 Gbps</li>
+            <li class="plan-feat"><span class="chk" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Painel Pterodactyl</li>
+            <li class="plan-feat"><span class="chk" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Deploy em 2 segundos</li>
+            <li class="plan-feat"><span class="chk" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Backup diário (7 dias)</li>
+            <li class="plan-feat"><span class="chk" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Paper, Spigot, Forge, Fabric</li>
+            <li class="plan-feat"><span class="chk" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Suporte via Discord</li>
+          </ul>
+          <a href="minecraft.html" class="btn btn-secondary btn-block">Contratar</a>
+        </div>
+
+        <!-- Standard – Featured -->
+        <div class="plan-card featured">
+          <div class="plan-badge">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.1 8.3 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 8.9 8.3 12 2"/></svg>
+            Mais Popular
+          </div>
+          <div class="plan-type">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3"/></svg>
+            Xeon Standard
+          </div>
+          <div class="plan-name">Standard</div>
+          <div class="plan-tag">O preferido da comunidade End Hosting</div>
+          <div class="plan-price">
+            <span class="curr">R$</span>
+            <span class="amt">39</span>
+            <span class="per">,90/mês</span>
+          </div>
+          <div class="plan-specs">
+            <div class="spec-row"><span class="spec-k">RAM</span>   <span class="spec-v">4 GB DDR4 ECC</span></div>
+            <div class="spec-row"><span class="spec-k">CPU</span>   <span class="spec-v">Xeon · 4 vCPU</span></div>
+            <div class="spec-row"><span class="spec-k">Disco</span> <span class="spec-v">30 GB NVMe</span></div>
+            <div class="spec-row"><span class="spec-k">Players</span><span class="spec-v">até 50</span></div>
+            <div class="spec-row"><span class="spec-k">Rede</span>  <span class="spec-v">Ilimitada</span></div>
+          </div>
+          <ul class="plan-features" aria-label="Recursos incluídos">
+            <li class="plan-feat"><span class="chk" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>DDoS Protection 500 Gbps</li>
+            <li class="plan-feat"><span class="chk" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Painel Pterodactyl</li>
+            <li class="plan-feat"><span class="chk" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Deploy em 2 segundos</li>
+            <li class="plan-feat"><span class="chk" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Backup diário (7 dias)</li>
+            <li class="plan-feat"><span class="chk" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Todos os tipos de servidor</li>
+            <li class="plan-feat"><span class="chk" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Suporte prioritário 24/7</li>
+          </ul>
+          <a href="minecraft.html" class="btn btn-primary btn-block">Contratar Agora</a>
+          <div class="urgency">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="10"/></svg>
+            Alta demanda — últimas unidades
+          </div>
+        </div>
+
+        <!-- Advanced -->
+        <div class="plan-card">
+          <div class="plan-type">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3"/></svg>
+            Xeon Advanced
+          </div>
+          <div class="plan-name">Advanced</div>
+          <div class="plan-tag">Para comunidades em crescimento</div>
+          <div class="plan-price">
+            <span class="curr">R$</span>
+            <span class="amt">69</span>
+            <span class="per">,90/mês</span>
+          </div>
+          <div class="plan-specs">
+            <div class="spec-row"><span class="spec-k">RAM</span>   <span class="spec-v">8 GB DDR4 ECC</span></div>
+            <div class="spec-row"><span class="spec-k">CPU</span>   <span class="spec-v">Xeon · 6 vCPU</span></div>
+            <div class="spec-row"><span class="spec-k">Disco</span> <span class="spec-v">60 GB NVMe</span></div>
+            <div class="spec-row"><span class="spec-k">Players</span><span class="spec-v">até 120</span></div>
+            <div class="spec-row"><span class="spec-k">Rede</span>  <span class="spec-v">Ilimitada</span></div>
+          </div>
+          <ul class="plan-features" aria-label="Recursos incluídos">
+            <li class="plan-feat"><span class="chk" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>DDoS Protection 500 Gbps</li>
+            <li class="plan-feat"><span class="chk" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Painel Pterodactyl + FTP</li>
+            <li class="plan-feat"><span class="chk" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Deploy em 2 segundos</li>
+            <li class="plan-feat"><span class="chk" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Backup diário (14 dias)</li>
+            <li class="plan-feat"><span class="chk" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Todos os tipos de servidor</li>
+            <li class="plan-feat"><span class="chk" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Suporte 24/7 dedicado</li>
+          </ul>
+          <a href="minecraft.html" class="btn btn-secondary btn-block">Contratar</a>
+        </div>
+
+        <!-- Pro -->
+        <div class="plan-card">
+          <div class="plan-type">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3"/></svg>
+            Xeon Pro
+          </div>
+          <div class="plan-name">Pro</div>
+          <div class="plan-tag">Para grandes servidores e comunidades</div>
+          <div class="plan-price">
+            <span class="curr">R$</span>
+            <span class="amt">119</span>
+            <span class="per">,90/mês</span>
+          </div>
+          <div class="plan-specs">
+            <div class="spec-row"><span class="spec-k">RAM</span>   <span class="spec-v">16 GB DDR4 ECC</span></div>
+            <div class="spec-row"><span class="spec-k">CPU</span>   <span class="spec-v">Xeon · 8 vCPU</span></div>
+            <div class="spec-row"><span class="spec-k">Disco</span> <span class="spec-v">120 GB NVMe</span></div>
+            <div class="spec-row"><span class="spec-k">Players</span><span class="spec-v">250+</span></div>
+            <div class="spec-row"><span class="spec-k">Rede</span>  <span class="spec-v">Ilimitada</span></div>
+          </div>
+          <ul class="plan-features" aria-label="Recursos incluídos">
+            <li class="plan-feat"><span class="chk" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>DDoS Protection 500 Gbps</li>
+            <li class="plan-feat"><span class="chk" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Painel Pterodactyl + FTP</li>
+            <li class="plan-feat"><span class="chk" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>IP dedicado incluído</li>
+            <li class="plan-feat"><span class="chk" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Backup diário (30 dias)</li>
+            <li class="plan-feat"><span class="chk" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Todos os tipos de servidor</li>
+            <li class="plan-feat"><span class="chk" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Gerente de conta dedicado</li>
+          </ul>
+          <a href="minecraft.html" class="btn btn-secondary btn-block">Contratar</a>
+        </div>
+
+      </div><!-- /plans-grid -->
+
+      <div class="fade-up" style="text-align:center;margin-top:40px;">
+        <p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:14px;">Precisa de máxima performance single-thread?</p>
+        <a href="planos-ryzen7.html" class="btn btn-dark">
+          Ver Planos Ryzen 7
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       USE CASES
+  ════════════════════════════════════════ -->
+  <section class="section" aria-labelledby="usecases-h2">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="label">Para quem é</span>
+        <h2 id="usecases-h2">Os planos Xeon são ideais para</h2>
+      </div>
+      <div class="features-grid stagger">
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></svg>
+          </div>
+          <h3>Servidores para amigos</h3>
+          <p>Perfeito para jogar com grupos pequenos. O plano Starter comporta até 20 jogadores simultâneos com excelente performance e ping abaixo de 20ms para jogadores brasileiros.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="6" y1="11" x2="10" y2="11"/><line x1="8" y1="9" x2="8" y2="13"/><line x1="15" y1="12" x2="15.01" y2="12"/><line x1="18" y1="10" x2="18.01" y2="10"/><path d="M17.3 5H6.7C4.1 5 2 7 2 9.5v5C2 17 4.1 19 6.7 19h10.6C19.9 19 22 17 22 14.5v-5C22 7 19.9 5 17.3 5z"/></svg>
+          </div>
+          <h3>Primeiros servidores públicos</h3>
+          <p>Está montando sua comunidade do zero? Os planos Xeon oferecem custo-benefício ideal para crescer sem comprometer o orçamento, com toda a infraestrutura profissional que você precisa.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <h3>Ambientes de desenvolvimento</h3>
+          <p>Teste novos mapas, configurações de plugins e scripts em um ambiente isolado antes de aplicar no servidor principal. Estável e confiável para testes contínuos.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+          </div>
+          <h3>Servidores educacionais</h3>
+          <p>Para escolas, projetos pedagógicos e Minecraft Education. A estabilidade do Xeon garante aulas e sessões sem interrupções, com ambiente controlado e seguro.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       SEO CONTENT
+  ════════════════════════════════════════ -->
+  <section class="section" style="background:var(--bg-surface)" aria-labelledby="seo-h2">
+    <div class="container">
+      <div class="content-art">
+        <div class="fade-up">
+          <span class="label">Entenda mais</span>
+          <h2 id="seo-h2">Por que escolher Intel Xeon para hospedagem Minecraft barata?</h2>
+          <p>O Intel Xeon é uma plataforma de servidor projetada para confiabilidade de longo prazo, com suporte a memória ECC (Error Correcting Code) que detecta e corrige erros de memória automaticamente. Para hospedagem Minecraft, isso se traduz em um ambiente estável onde seu servidor raramente apresenta falhas de hardware — essencial para manter sua comunidade sempre online.</p>
+          <p>Na <strong>End Hosting</strong>, cada plano Xeon utiliza hardware dedicado em nosso data center localizado em São Paulo, garantindo que os recursos contratados estejam sempre disponíveis para o seu servidor. Sem compartilhamento excessivo, sem "vizinhos barulhentos" afetando sua performance.</p>
+        </div>
+
+        <div class="fade-up">
+          <h3>Hospedagem Minecraft barata não precisa ser ruim</h3>
+          <p>Existe um equívoco comum de que preço baixo significa qualidade inferior. Na End Hosting, nossa eficiência operacional e gestão otimizada de hardware permitem entregar preços competitivos sem sacrificar a experiência de jogo. Todos os planos Xeon incluem proteção DDoS de 500 Gbps, backups automáticos diários e suporte em português — sem cobranças ocultas ou taxas de ativação.</p>
+        </div>
+
+        <div class="fade-up">
+          <h3>Como escolher entre Xeon Starter, Standard, Advanced e Pro?</h3>
+          <p>A escolha depende principalmente do número de jogadores simultâneos e da intensidade de plugins. O <strong>Starter</strong> atende bem grupos de até 20 pessoas com vanilla ou poucos plugins leves. O <strong>Standard</strong> é ideal para comunidades de até 50 jogadores com servidores Semi-RP ou Survival com plugins moderados. O <strong>Advanced</strong> suporta até 120 jogadores com infraestrutura mais completa. Para comunidades maiores com 250+ players, o <strong>Pro</strong> oferece recursos premium incluindo IP dedicado. Use nosso <a href="minecraft.html" style="color:var(--blue-light);">seletor de plano</a> para uma recomendação personalizada.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       CTA
+  ════════════════════════════════════════ -->
+  <section class="cta-section" aria-labelledby="cta-h2">
+    <div class="container">
+      <span class="label" style="color:#7ab4ff;">End Hosting · Xeon</span>
+      <h2 id="cta-h2">Hospedagem Minecraft barata<br>com qualidade garantida</h2>
+      <p>Deploy em 2 segundos. DDoS 500 Gbps. Suporte 24/7 em português. Sem taxa de configuração.</p>
+      <div class="cta-actions">
+        <a href="minecraft.html" class="btn btn-primary btn-lg">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          Criar Servidor — R$&nbsp;19,90
+        </a>
+        <a href="faq.html" class="btn btn-ghost">
+          Tenho dúvidas
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+        </a>
+      </div>
+      <p class="cta-fine">Sem fidelidade · Pix, cartão ou boleto · Cancele quando quiser</p>
+    </div>
+  </section>
+
+  <footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+
+      <!-- Brand -->
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo" style="display:inline-flex;" aria-label="End Hosting">
+          <div class="nav-logo-mark" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/>
+              <line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/>
+            </svg>
+          </div>
+          <span class="nav-logo-text">End<span class="accent">Hosting</span></span>
+        </a>
+        <p>Hospedagem de servidores Minecraft e VPS com a melhor infraestrutura do Brasil. Latência mínima, uptime máximo, suporte humano 24/7.</p>
+        <div class="footer-socials">
+          <a href="https://discord.gg/endhosting" target="_blank" rel="noopener" class="footer-soc" aria-label="Discord">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.3 4.4A19.2 19.2 0 0 0 15.6 3c-.2.4-.5 1-.7 1.4a17.8 17.8 0 0 0-5.8 0C8.9 4 8.5 3.4 8.3 3A19 19 0 0 0 3.7 4.4C.5 9.4-.3 14.2.1 18.9a19.4 19.4 0 0 0 6 3c.5-.7 1-1.4 1.3-2.2-.7-.3-1.4-.6-2-1l.5-.4c3.8 1.8 8 1.8 11.8 0l.5.4c-.7.4-1.3.8-2 1 .3.8.8 1.5 1.3 2.2 2.2-.7 4.3-1.8 6-3 .5-5.4-.9-10.1-3.2-14.5zM8 15.5c-1.3 0-2.3-1.2-2.3-2.6 0-1.4 1-2.6 2.3-2.6s2.3 1.1 2.3 2.6c0 1.4-1 2.6-2.3 2.6zm7.9 0c-1.3 0-2.3-1.2-2.3-2.6 0-1.4 1-2.6 2.3-2.6s2.3 1.1 2.3 2.6c0 1.4-1 2.6-2.3 2.6z"/></svg>
+          </a>
+          <a href="https://instagram.com/endhosting" target="_blank" rel="noopener" class="footer-soc" aria-label="Instagram">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.4a4 4 0 1 1-4.9-3.9 4 4 0 0 1 4.9 3.9z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://twitter.com/endhosting" target="_blank" rel="noopener" class="footer-soc" aria-label="Twitter/X">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l16 16M4 20L20 4"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Planos -->
+      <div class="footer-col">
+        <h5>Planos</h5>
+        <ul class="footer-links">
+          <li><a href="minecraft.html"     class="footer-link">Escolher Plano</a></li>
+          <li><a href="planos-xeon.html"   class="footer-link">Servidores Xeon</a></li>
+          <li><a href="planos-ryzen7.html" class="footer-link">Servidores Ryzen 7</a></li>
+          <li><a href="planos-xeon.html"   class="footer-link">VPS Linux</a></li>
+        </ul>
+      </div>
+
+      <!-- Empresa -->
+      <div class="footer-col">
+        <h5>Empresa</h5>
+        <ul class="footer-links">
+          <li><a href="sobre.html" class="footer-link">Sobre nós</a></li>
+          <li><a href="faq.html"   class="footer-link">FAQ</a></li>
+          <li><a href="#"          class="footer-link">Status</a></li>
+          <li><a href="#"          class="footer-link">Blog</a></li>
+        </ul>
+      </div>
+
+      <!-- Suporte -->
+      <div class="footer-col">
+        <h5>Suporte</h5>
+        <ul class="footer-links">
+          <li><a href="https://discord.gg/endhosting" target="_blank" rel="noopener" class="footer-link">Discord</a></li>
+          <li><a href="#" class="footer-link">Abrir ticket</a></li>
+          <li><a href="#" class="footer-link">Base de conhecimento</a></li>
+          <li><a href="#" class="footer-link">Painel de controle</a></li>
+        </ul>
+      </div>
+
+    </div><!-- /footer-grid -->
+
+    <div class="footer-bot">
+      <span class="footer-copy">© 2024 End Hosting · Todos os direitos reservados</span>
+      <div class="footer-links-bot">
+        <a href="#" class="footer-copy" style="text-decoration:underline">Termos de Uso</a>
+        <a href="#" class="footer-copy" style="text-decoration:underline">Privacidade</a>
+        <a href="#" class="footer-copy" style="text-decoration:underline">LGPD</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating Support Button -->
+<a href="https://discord.gg/endhosting" target="_blank" rel="noopener"
+   id="float-btn" class="float-btn" aria-label="Suporte via Discord">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.3 4.4A19.2 19.2 0 0 0 15.6 3c-.2.4-.5 1-.7 1.4a17.8 17.8 0 0 0-5.8 0C8.9 4 8.5 3.4 8.3 3A19 19 0 0 0 3.7 4.4C.5 9.4-.3 14.2.1 18.9a19.4 19.4 0 0 0 6 3c.5-.7 1-1.4 1.3-2.2-.7-.3-1.4-.6-2-1l.5-.4c3.8 1.8 8 1.8 11.8 0l.5.4c-.7.4-1.3.8-2 1 .3.8.8 1.5 1.3 2.2 2.2-.7 4.3-1.8 6-3 .5-5.4-.9-10.1-3.2-14.5zM8 15.5c-1.3 0-2.3-1.2-2.3-2.6 0-1.4 1-2.6 2.3-2.6s2.3 1.1 2.3 2.6c0 1.4-1 2.6-2.3 2.6zm7.9 0c-1.3 0-2.3-1.2-2.3-2.6 0-1.4 1-2.6 2.3-2.6s2.3 1.1 2.3 2.6c0 1.4-1 2.6-2.3 2.6z"/></svg>
+  <span class="fl-label">Suporte</span>
+</a>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

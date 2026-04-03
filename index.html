@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="theme-color" content="#0f0a1f"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>End Hosting — Hospedagem de Servidores Minecraft e VPS no Brasil</title>
+  <meta name="description" content="End Hosting oferece hospedagem de servidores Minecraft e VPS de alta performance no Brasil. Baixa latência, proteção DDoS 500 Gbps, deploy em 2 segundos. Comece agora."/>
+  <meta name="keywords" content="hospedagem minecraft, servidor minecraft brasil, VPS brasil, hosting minecraft, end hosting"/>
+  <meta property="og:title" content="End Hosting — Hospedagem Minecraft e VPS no Brasil"/>
+  <meta property="og:description" content="Infraestrutura premium para servidores Minecraft e VPS com baixa latência no Brasil."/>
+  <meta property="og:type" content="website"/>
+  <link rel="canonical" href="https://endhosting.com.br/"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "End Hosting",
+    "url": "https://endhosting.com.br",
+    "description": "Hospedagem de servidores Minecraft e VPS de alta performance no Brasil. Baixa latência, proteção DDoS 500 Gbps e deploy em 2 segundos.",
+    "foundingDate": "2020",
+    "areaServed": "BR",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "availableLanguage": "Portuguese"
+    },
+    "sameAs": [
+      "https://discord.gg/endhosting",
+      "https://instagram.com/endhosting"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Component slot: header loaded by JS -->
+  <div id="scroll-bar" aria-hidden="true"></div>
+
+<nav class="nav" role="navigation" aria-label="Navegação principal">
+  <div class="nav-inner">
+
+    <!-- Logo -->
+    <a href="index.html" class="nav-logo" aria-label="End Hosting – Página inicial">
+      <div class="nav-logo-mark" aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/>
+          <line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/>
+        </svg>
+      </div>
+      <span class="nav-logo-text">End<span class="accent">Hosting</span></span>
+    </a>
+
+    <!-- Desktop links -->
+    <ul class="nav-links" role="list">
+      <li>
+        <a href="index.html" class="nav-link">Início</a>
+      </li>
+
+      <!-- Dropdown: Hospedagem de Minecraft -->
+      <li class="nav-dropdown">
+        <a href="minecraft.html" class="nav-link" tabindex="0" aria-haspopup="true" aria-expanded="false">
+          Minecraft
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </a>
+        <div class="dropdown-menu" role="menu">
+          <a href="minecraft.html" class="dropdown-item" role="menuitem">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Escolher Plano
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="planos-xeon.html" class="dropdown-item" role="menuitem">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3M3 3l18 0 0 18H3z"/></svg>
+            Planos Xeon
+          </a>
+          <a href="planos-ryzen7.html" class="dropdown-item" role="menuitem">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+            Planos Ryzen 7
+          </a>
+        </div>
+      </li>
+
+      <li><a href="sobre.html" class="nav-link">Sobre</a></li>
+      <li><a href="faq.html"   class="nav-link">FAQ</a></li>
+    </ul>
+
+    <!-- Actions -->
+    <div class="nav-actions">
+      <button class="theme-btn" onclick="toggleTheme()" aria-label="Alternar tema">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+
+      <a href="https://discord.gg/endhosting" target="_blank" rel="noopener" class="btn-discord" aria-label="Entrar no Discord da End Hosting">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.3 4.4A19.2 19.2 0 0 0 15.6 3c-.2.4-.5 1-.7 1.4a17.8 17.8 0 0 0-5.8 0C8.9 4 8.5 3.4 8.3 3A19 19 0 0 0 3.7 4.4C.5 9.4-.3 14.2.1 18.9a19.4 19.4 0 0 0 6 3c.5-.7 1-1.4 1.3-2.2-.7-.3-1.4-.6-2-1l.5-.4c3.8 1.8 8 1.8 11.8 0l.5.4c-.7.4-1.3.8-2 1 .3.8.8 1.5 1.3 2.2 2.2-.7 4.3-1.8 6-3 .5-5.4-.9-10.1-3.2-14.5zM8 15.5c-1.3 0-2.3-1.2-2.3-2.6 0-1.4 1-2.6 2.3-2.6s2.3 1.1 2.3 2.6c0 1.4-1 2.6-2.3 2.6zm7.9 0c-1.3 0-2.3-1.2-2.3-2.6 0-1.4 1-2.6 2.3-2.6s2.3 1.1 2.3 2.6c0 1.4-1 2.6-2.3 2.6z"/></svg>
+        Discord
+      </a>
+
+      <a href="minecraft.html" class="btn btn-primary btn-sm">Criar Servidor</a>
+
+      <button class="hamburger" aria-expanded="false" aria-label="Abrir menu" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Menu mobile">
+    <a href="index.html"         class="nav-link">Início</a>
+
+    <div class="nav-link" style="cursor:default;opacity:0.55;font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;font-family:'JetBrains Mono',monospace;padding:10px 16px 4px;">
+      Minecraft
+    </div>
+    <div class="mobile-sub">
+      <a href="minecraft.html"     class="nav-link">Escolher Plano</a>
+      <a href="planos-xeon.html"   class="nav-link">Planos Xeon</a>
+      <a href="planos-ryzen7.html" class="nav-link">Planos Ryzen 7</a>
+    </div>
+
+    <div class="mobile-menu-divider"></div>
+    <a href="sobre.html"           class="nav-link">Sobre</a>
+    <a href="faq.html"             class="nav-link">FAQ</a>
+
+    <a href="https://discord.gg/endhosting" target="_blank" rel="noopener" class="btn-discord">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.3 4.4A19.2 19.2 0 0 0 15.6 3c-.2.4-.5 1-.7 1.4a17.8 17.8 0 0 0-5.8 0C8.9 4 8.5 3.4 8.3 3A19 19 0 0 0 3.7 4.4C.5 9.4-.3 14.2.1 18.9a19.4 19.4 0 0 0 6 3c.5-.7 1-1.4 1.3-2.2-.7-.3-1.4-.6-2-1l.5-.4c3.8 1.8 8 1.8 11.8 0l.5.4c-.7.4-1.3.8-2 1 .3.8.8 1.5 1.3 2.2 2.2-.7 4.3-1.8 6-3 .5-5.4-.9-10.1-3.2-14.5zM8 15.5c-1.3 0-2.3-1.2-2.3-2.6 0-1.4 1-2.6 2.3-2.6s2.3 1.1 2.3 2.6c0 1.4-1 2.6-2.3 2.6zm7.9 0c-1.3 0-2.3-1.2-2.3-2.6 0-1.4 1-2.6 2.3-2.6s2.3 1.1 2.3 2.6c0 1.4-1 2.6-2.3 2.6z"/></svg>
+      Entrar no Discord
+    </a>
+  </nav>
+</nav>
+
+  <!-- ════════════════════════════════════════
+       HERO
+  ════════════════════════════════════════ -->
+  <section class="hero" aria-label="End Hosting — Hospedagem de alta performance">
+    <canvas class="hero-canvas" id="hero-canvas" aria-hidden="true"></canvas>
+    <div class="hero-grid" aria-hidden="true"></div>
+
+    <div class="hero-content">
+      <!-- Left -->
+      <div class="hero-text">
+        <div class="hero-eyebrow">
+          <span class="dot" aria-hidden="true"></span>
+          Infraestrutura 100% no Brasil
+        </div>
+
+        <h1>
+          Seu servidor
+          <span class="line-accent" id="typewriter">Minecraft</span>
+          sem lag.
+        </h1>
+
+        <p class="hero-desc">
+          End Hosting entrega hospedagem de alta performance com hardware dedicado, data center no Brasil e proteção DDoS de 500&nbsp;Gbps. Deploy automático em menos de 2&nbsp;segundos.
+        </p>
+
+        <div class="hero-actions">
+          <a href="minecraft.html" class="btn btn-primary btn-lg">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            Criar Servidor Agora
+          </a>
+          <a href="planos-ryzen7.html" class="btn btn-ghost btn-lg">
+            Ver Planos Premium
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="hero-stat-value"><span data-count="99.9" data-suffix="%">0%</span></div>
+            <div class="hero-stat-label">Uptime garantido</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-value"><span data-count="2" data-suffix="s">&lt;2s</span></div>
+            <div class="hero-stat-label">Para ativar</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-value"><span data-count="500" data-suffix=" Gbps">0</span></div>
+            <div class="hero-stat-label">Proteção DDoS</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-value"><span data-count="1200" data-suffix="+">0+</span></div>
+            <div class="hero-stat-label">Servidores ativos</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: server widget -->
+      <div class="hero-visual" aria-hidden="true">
+        <div class="server-widget">
+          <div class="widget-head">
+            <span class="widget-title">END-NODE-BR01 · São Paulo</span>
+            <div class="widget-status">
+              <span class="status-dot"></span> ONLINE
+            </div>
+          </div>
+          <div class="widget-metrics">
+            <div class="w-metric">
+              <span class="w-metric-label">CPU</span>
+              <div class="w-metric-bar"><div class="w-metric-fill" style="width:42%"></div></div>
+              <span class="w-metric-val">42%</span>
+            </div>
+            <div class="w-metric">
+              <span class="w-metric-label">RAM</span>
+              <div class="w-metric-bar"><div class="w-metric-fill" style="width:68%"></div></div>
+              <span class="w-metric-val">68%</span>
+            </div>
+            <div class="w-metric">
+              <span class="w-metric-label">REDE</span>
+              <div class="w-metric-bar"><div class="w-metric-fill" style="width:31%"></div></div>
+              <span class="w-metric-val">31%</span>
+            </div>
+            <div class="w-metric">
+              <span class="w-metric-label">DISK</span>
+              <div class="w-metric-bar"><div class="w-metric-fill" style="width:55%"></div></div>
+              <span class="w-metric-val">55%</span>
+            </div>
+          </div>
+          <div class="widget-footer">
+            <div class="widget-ping">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              Ping médio <strong>18ms</strong>
+            </div>
+            <div class="widget-price">R$&nbsp;19,90<span>/mês</span></div>
+          </div>
+        </div>
+
+        <div class="widget-float widget-float-1">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L4 6v6c0 5 3.8 9.7 8 10.9C16.2 21.7 20 17 20 12V6L12 2z"/></svg>
+          DDoS Protected
+        </div>
+        <div class="widget-float widget-float-2">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Brasil
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Bar -->
+  <div class="trust-bar" role="complementary">
+    <div class="container">
+      <ul class="trust-items">
+        <li class="trust-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L4 6v6c0 5 3.8 9.7 8 10.9C16.2 21.7 20 17 20 12V6L12 2z"/></svg>
+          Proteção DDoS 500 Gbps
+        </li>
+        <li class="trust-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          Deploy em 2 segundos
+        </li>
+        <li class="trust-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Data center no Brasil
+        </li>
+        <li class="trust-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 18v-6a9 9 0 0 1 18 0v6M3 18a2 2 0 1 0 4 0v-2a2 2 0 1 0-4 0v2zm14-2a2 2 0 1 1 4 0v2a2 2 0 1 1-4 0v-2z"/></svg>
+          Suporte 24/7 em PT-BR
+        </li>
+        <li class="trust-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.7 4 3 9 3s9-1.3 9-3V5M3 12c0 1.7 4 3 9 3s9-1.3 9-3"/></svg>
+          Backups automáticos
+        </li>
+        <li class="trust-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/></svg>
+          99,9% uptime
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════
+       HOW IT WORKS
+  ════════════════════════════════════════ -->
+  <section class="section" aria-labelledby="how-heading">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="label">Como funciona</span>
+        <h2 id="how-heading">Servidor online em 3 passos</h2>
+        <p>Do pagamento ao jogo em menos de 2 minutos. Sem configurações complexas.</p>
+      </div>
+
+      <div class="steps-grid stagger">
+        <div class="step-card">
+          <div class="step-num">01</div>
+          <div class="step-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+          </div>
+          <h3>Escolha seu plano</h3>
+          <p>Use nosso seletor inteligente ou escolha diretamente entre Xeon (custo-benefício) ou Ryzen 7 (alta performance).</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">02</div>
+          <div class="step-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+          </div>
+          <h3>Pague com Pix ou cartão</h3>
+          <p>Confirmação instantânea via Pix, cartão de crédito em até 12x ou boleto. Sem taxa de ativação.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">03</div>
+          <div class="step-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="11" x2="10" y2="11"/><line x1="8" y1="9" x2="8" y2="13"/><line x1="15" y1="12" x2="15.01" y2="12"/><line x1="18" y1="10" x2="18.01" y2="10"/><path d="M17.3 5H6.7C4.1 5 2 7 2 9.5v5C2 17 4.1 19 6.7 19h10.6C19.9 19 22 17 22 14.5v-5C22 7 19.9 5 17.3 5z"/></svg>
+          </div>
+          <h3>Jogue em segundos</h3>
+          <p>Servidor ativado automaticamente. Acesse o painel Pterodactyl, configure o mundo e convide seus amigos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       BENEFITS
+  ════════════════════════════════════════ -->
+  <section class="section" style="background:var(--bg-surface)" aria-labelledby="benefits-heading">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="label">Por que End Hosting</span>
+        <h2 id="benefits-heading">Infraestrutura construída para performance</h2>
+        <p>Hardware dedicado, rede própria e data center no Brasil. Não somos uma revenda.</p>
+      </div>
+
+      <div class="features-grid stagger">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <h3>Data Center no Brasil</h3>
+          <p>Servidores fisicamente localizados em São Paulo. Ping abaixo de 20ms para jogadores de SP, RJ, BH e Brasília.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L4 6v6c0 5 3.8 9.7 8 10.9C16.2 21.7 20 17 20 12V6L12 2z"/></svg>
+          </div>
+          <h3>Proteção DDoS 500 Gbps</h3>
+          <p>Mitigação automática contra ataques volumétricos. Seu servidor permanece online mesmo sob ataques intensos.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          </div>
+          <h3>Deploy em 2 Segundos</h3>
+          <p>Ativação 100% automática após confirmação do pagamento. Nenhuma fila, nenhuma espera.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+          </div>
+          <h3>Painel Pterodactyl</h3>
+          <p>Gerencie versões, mods, plugins e backups com poucos cliques. FTP/SFTP e acesso completo incluídos.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.7 4 3 9 3s9-1.3 9-3V5M3 12c0 1.7 4 3 9 3s9-1.3 9-3"/></svg>
+          </div>
+          <h3>Backups Automáticos</h3>
+          <p>Backups diários com retenção de 7 a 30 dias. Restaure qualquer ponto com um clique.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+          </div>
+          <h3>Upgrade Sem Migração</h3>
+          <p>Suba de plano em menos de 1 minuto, sem perder nenhum dado. Pague proporcional aos dias restantes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       COMPATIBILITY
+  ════════════════════════════════════════ -->
+  <section class="section" aria-labelledby="compat-heading">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="label">Compatibilidade Total</span>
+        <h2 id="compat-heading">Suporte a todos os tipos de servidor</h2>
+        <p>Instale qualquer plataforma com um clique no painel. Sem complicação técnica.</p>
+      </div>
+      <div class="compat-grid stagger">
+        <div class="compat-card">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/></svg>
+          <span>Vanilla</span>
+        </div>
+        <div class="compat-card">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+          <span>Paper</span>
+        </div>
+        <div class="compat-card">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93l-1.41 1.41M4.93 4.93l1.41 1.41M4.93 19.07l1.41-1.41M19.07 19.07l-1.41-1.41M1 12h2M21 12h2M12 1v2M12 21v2"/></svg>
+          <span>Spigot</span>
+        </div>
+        <div class="compat-card">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          <span>Forge</span>
+        </div>
+        <div class="compat-card">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/></svg>
+          <span>Fabric</span>
+        </div>
+        <div class="compat-card">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span>Purpur</span>
+        </div>
+        <div class="compat-card">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <span>BungeeCord</span>
+        </div>
+        <div class="compat-card">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12H2M22 12l-4-4M22 12l-4 4"/></svg>
+          <span>Velocity</span>
+        </div>
+        <div class="compat-card">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          <span>Bedrock</span>
+        </div>
+        <div class="compat-card">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span>NeoForge</span>
+        </div>
+        <div class="compat-card">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          <span>Waterfall</span>
+        </div>
+        <div class="compat-card compat-more">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+          <span>Mais opções</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       PLANS
+  ════════════════════════════════════════ -->
+  <section class="section" style="background:var(--bg-surface)" aria-labelledby="plans-heading">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="label">Nossos Planos</span>
+        <h2 id="plans-heading">Escolha o plano ideal para você</h2>
+        <p>Todos os planos incluem proteção DDoS, backups diários e suporte 24/7. Deploy instantâneo após o pagamento.</p>
+      </div>
+
+      <div class="plan-switcher fade-up">
+        <button class="plan-tab active" data-target="xeon">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3M3 3l18 0 0 18H3z"/></svg>
+          Xeon — Custo-benefício
+        </button>
+        <button class="plan-tab" data-target="ryzen">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+          Ryzen 7 — Alta Performance
+        </button>
+      </div>
+
+      <!-- Xeon group -->
+      <div class="plan-group" data-group="xeon">
+        <div class="plans-grid stagger">
+          <div class="plan-card">
+            <div class="plan-type">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3M3 3l18 0 0 18H3z"/></svg>
+              Xeon Series
+            </div>
+            <div class="plan-name">Starter</div>
+            <div class="plan-tag">Para começar sua aventura</div>
+            <div class="plan-price"><span class="curr">R$</span><span class="amt">19</span><span class="per">,90/mês</span></div>
+            <div class="plan-specs">
+              <div class="spec-row"><span class="spec-k">RAM</span>     <span class="spec-v">2 GB DDR4</span></div>
+              <div class="spec-row"><span class="spec-k">CPU</span>     <span class="spec-v">Xeon · 2 vCPU</span></div>
+              <div class="spec-row"><span class="spec-k">Disco</span>  <span class="spec-v">15 GB NVMe</span></div>
+              <div class="spec-row"><span class="spec-k">Players</span><span class="spec-v">até 20</span></div>
+            </div>
+            <ul class="plan-features">
+              <li class="plan-feat"><span class="chk"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>DDoS 500 Gbps</li>
+              <li class="plan-feat"><span class="chk"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Painel Pterodactyl</li>
+              <li class="plan-feat"><span class="chk"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Deploy instantâneo</li>
+              <li class="plan-feat"><span class="chk"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Backup diário 7 dias</li>
+            </ul>
+            <a href="planos-xeon.html" class="btn btn-secondary btn-block">Contratar</a>
+          </div>
+
+          <div class="plan-card featured">
+            <div class="plan-badge">Mais Popular</div>
+            <div class="plan-type"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3M3 3l18 0 0 18H3z"/></svg>Xeon Series</div>
+            <div class="plan-name">Standard</div>
+            <div class="plan-tag">O preferido da comunidade</div>
+            <div class="plan-price"><span class="curr">R$</span><span class="amt">39</span><span class="per">,90/mês</span></div>
+            <div class="plan-specs">
+              <div class="spec-row"><span class="spec-k">RAM</span>     <span class="spec-v">4 GB DDR4</span></div>
+              <div class="spec-row"><span class="spec-k">CPU</span>     <span class="spec-v">Xeon · 4 vCPU</span></div>
+              <div class="spec-row"><span class="spec-k">Disco</span>  <span class="spec-v">30 GB NVMe</span></div>
+              <div class="spec-row"><span class="spec-k">Players</span><span class="spec-v">até 50</span></div>
+            </div>
+            <ul class="plan-features">
+              <li class="plan-feat"><span class="chk"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>DDoS 500 Gbps</li>
+              <li class="plan-feat"><span class="chk"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Painel Pterodactyl</li>
+              <li class="plan-feat"><span class="chk"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Deploy instantâneo</li>
+              <li class="plan-feat"><span class="chk"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Backup diário 7 dias</li>
+              <li class="plan-feat"><span class="chk"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Suporte prioritário 24/7</li>
+            </ul>
+            <a href="planos-xeon.html" class="btn btn-primary btn-block">Contratar Agora</a>
+            <div class="urgency">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              Alta demanda — últimas unidades
+            </div>
+          </div>
+
+          <div class="plan-card">
+            <div class="plan-type"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3M3 3l18 0 0 18H3z"/></svg>Xeon Series</div>
+            <div class="plan-name">Advanced</div>
+            <div class="plan-tag">Para comunidades em crescimento</div>
+            <div class="plan-price"><span class="curr">R$</span><span class="amt">69</span><span class="per">,90/mês</span></div>
+            <div class="plan-specs">
+              <div class="spec-row"><span class="spec-k">RAM</span>     <span class="spec-v">8 GB DDR4</span></div>
+              <div class="spec-row"><span class="spec-k">CPU</span>     <span class="spec-v">Xeon · 6 vCPU</span></div>
+              <div class="spec-row"><span class="spec-k">Disco</span>  <span class="spec-v">60 GB NVMe</span></div>
+              <div class="spec-row"><span class="spec-k">Players</span><span class="spec-v">até 120</span></div>
+            </div>
+            <ul class="plan-features">
+              <li class="plan-feat"><span class="chk"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>DDoS 500 Gbps</li>
+              <li class="plan-feat"><span class="chk"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Painel Pterodactyl</li>
+              <li class="plan-feat"><span class="chk"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Deploy instantâneo</li>
+              <li class="plan-feat"><span class="chk"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Backup diário 14 dias</li>
+              <li class="plan-feat"><span class="chk"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Suporte 24/7 dedicado</li>
+            </ul>
+            <a href="planos-xeon.html" class="btn btn-secondary btn-block">Contratar</a>
+          </div>
+        </div>
+        <div style="text-align:center;margin-top:28px;" class="fade-up">
+          <a href="planos-xeon.html" class="btn btn-dark">Ver todos os planos Xeon</a>
+        </div>
+      </div>
+
+      <!-- Ryzen group (hidden by default) -->
+      <div class="plan-group" data-group="ryzen" style="display:none">
+        <div class="plans-grid stagger">
+          <div class="plan-card">
+            <div class="plan-type"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/></svg>Ryzen 7 Series</div>
+            <div class="plan-name">Ryzen Starter</div>
+            <div class="plan-tag">Performance premium acessível</div>
+            <div class="plan-price"><span class="curr">R$</span><span class="amt">59</span><span class="per">,90/mês</span></div>
+            <div class="plan-specs">
+              <div class="spec-row"><span class="spec-k">RAM</span>     <span class="spec-v">4 GB DDR5</span></div>
+              <div class="spec-row"><span class="spec-k">CPU</span>     <span class="spec-v">Ryzen 7 · 2 vCPU</span></div>
+              <div class="spec-row"><span class="spec-k">Disco</span>  <span class="spec-v">40 GB NVMe Gen4</span></div>
+              <div class="spec-row"><span class="spec-k">Players</span><span class="spec-v">até 60</span></div>
+            </div>
+            <ul class="plan-features">
+              <li class="plan-feat"><span class="chk"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>DDoS 500 Gbps</li>
+              <li class="plan-feat"><span class="chk"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Ryzen 7 5.4GHz boost</li>
+              <li class="plan-feat"><span class="chk"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>RAM DDR5 alta velocidade</li>
+              <li class="plan-feat"><span class="chk"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Backup diário 7 dias</li>
+            </ul>
+            <a href="planos-ryzen7.html" class="btn btn-secondary btn-block">Contratar</a>
+          </div>
+
+          <div class="plan-card featured">
+            <div class="plan-badge">Alta Performance</div>
+            <div class="plan-type"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/></svg>Ryzen 7 Series</div>
+            <div class="plan-name">Ryzen Pro</div>
+            <div class="plan-tag">Favorito dos grandes servidores</div>
+            <div class="plan-price"><span class="curr">R$</span><span class="amt">99</span><span class="per">,90/mês</span></div>
+            <div class="plan-specs">
+              <div class="spec-row"><span class="spec-k">RAM</span>     <span class="spec-v">8 GB DDR5</span></div>
+              <div class="spec-row"><span class="spec-k">CPU</span>     <span class="spec-v">Ryzen 7 · 4 vCPU</span></div>
+              <div class="spec-row"><span class="spec-k">Disco</span>  <span class="spec-v">80 GB NVMe Gen4</span></div>
+              <div class="spec-row"><span class="spec-k">Players</span><span class="spec-v">até 150</span></div>
+            </div>
+            <ul class="plan-features">
+              <li class="plan-feat"><span class="chk"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>DDoS 500 Gbps</li>
+              <li class="plan-feat"><span class="chk"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Ryzen 7 5.4GHz boost</li>
+              <li class="plan-feat"><span class="chk"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>IP dedicado incluído</li>
+              <li class="plan-feat"><span class="chk"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Backup diário 14 dias</li>
+              <li class="plan-feat"><span class="chk"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Suporte prioritário 24/7</li>
+            </ul>
+            <a href="planos-ryzen7.html" class="btn btn-primary btn-block">Contratar Agora</a>
+            <div class="urgency"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>Poucas vagas disponíveis</div>
+          </div>
+
+          <div class="plan-card">
+            <div class="plan-type"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/></svg>Ryzen 7 Series</div>
+            <div class="plan-name">Ryzen Elite</div>
+            <div class="plan-tag">Para networks e grandes comunidades</div>
+            <div class="plan-price"><span class="curr">R$</span><span class="amt">179</span><span class="per">,90/mês</span></div>
+            <div class="plan-specs">
+              <div class="spec-row"><span class="spec-k">RAM</span>     <span class="spec-v">16 GB DDR5</span></div>
+              <div class="spec-row"><span class="spec-k">CPU</span>     <span class="spec-v">Ryzen 7 · 8 vCPU</span></div>
+              <div class="spec-row"><span class="spec-k">Disco</span>  <span class="spec-v">160 GB NVMe Gen4</span></div>
+              <div class="spec-row"><span class="spec-k">Players</span><span class="spec-v">300+</span></div>
+            </div>
+            <ul class="plan-features">
+              <li class="plan-feat"><span class="chk"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>DDoS 500 Gbps</li>
+              <li class="plan-feat"><span class="chk"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Ryzen 7 5.4GHz boost</li>
+              <li class="plan-feat"><span class="chk"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>2 IPs dedicados</li>
+              <li class="plan-feat"><span class="chk"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Backup diário 30 dias</li>
+              <li class="plan-feat"><span class="chk"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Gerente de conta exclusivo</li>
+            </ul>
+            <a href="planos-ryzen7.html" class="btn btn-secondary btn-block">Contratar</a>
+          </div>
+        </div>
+        <div style="text-align:center;margin-top:28px;" class="fade-up">
+          <a href="planos-ryzen7.html" class="btn btn-dark">Ver todos os planos Ryzen 7</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       TESTIMONIALS
+  ════════════════════════════════════════ -->
+  <section class="section" aria-labelledby="testimonials-heading">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="label">Depoimentos</span>
+        <h2 id="testimonials-heading">O que nossa comunidade diz</h2>
+        <p>Mais de 1.200 servidores ativos confiam na End Hosting.</p>
+      </div>
+      <div class="testimonials-grid stagger">
+        <div class="testimonial-card">
+          <div class="stars">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.1 8.3 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 8.9 8.3 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.1 8.3 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 8.9 8.3 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.1 8.3 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 8.9 8.3 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.1 8.3 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 8.9 8.3 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.1 8.3 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 8.9 8.3 12 2"/></svg>
+          </div>
+          <p class="testimonial-text">"Migrei de outro provedor e a diferença é gritante. Ping caiu de 150ms para 18ms. Meus jogadores nunca mais reclamaram de lag."</p>
+          <div class="t-author">
+            <div class="t-avatar">MR</div>
+            <div><div class="t-name">Marcos Ribeiro</div><div class="t-role">Dono — SurvivalBR</div></div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.1 8.3 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 8.9 8.3 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.1 8.3 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 8.9 8.3 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.1 8.3 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 8.9 8.3 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.1 8.3 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 8.9 8.3 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.1 8.3 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 8.9 8.3 12 2"/></svg>
+          </div>
+          <p class="testimonial-text">"Suporte incrível — responderam em 5 minutos às 2h da manhã. Nunca vi isso em outro provedor."</p>
+          <div class="t-author">
+            <div class="t-avatar">AC</div>
+            <div><div class="t-name">Ana Carolina</div><div class="t-role">Criadora de conteúdo · 80k</div></div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.1 8.3 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 8.9 8.3 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.1 8.3 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 8.9 8.3 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.1 8.3 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 8.9 8.3 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.1 8.3 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 8.9 8.3 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.1 8.3 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 8.9 8.3 12 2"/></svg>
+          </div>
+          <p class="testimonial-text">"Uso o Ryzen Pro há 8 meses. 200+ jogadores simultâneos, TPS sempre próximo de 20. Simplesmente funciona."</p>
+          <div class="t-author">
+            <div class="t-avatar">FT</div>
+            <div><div class="t-name">Felipe Torres</div><div class="t-role">Admin — HardcoreMC Network</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       SEO CONTENT
+  ════════════════════════════════════════ -->
+  <section class="section" style="background:var(--bg-surface)" aria-labelledby="content-heading">
+    <div class="container">
+      <div class="content-art">
+        <div class="fade-up">
+          <span class="label">Saiba mais</span>
+          <h2 id="content-heading">O que é hospedagem de servidor Minecraft?</h2>
+          <p>Hospedagem de servidor Minecraft é um serviço que permite rodar um servidor 24/7 sem precisar manter seu computador ligado. Ao contratar um plano da <strong>End Hosting</strong>, você recebe um servidor com hardware dedicado, network no Brasil e painel de controle completo — tudo configurado especialmente para Minecraft.</p>
+          <p>Com um servidor próprio, você tem controle total: crie regras, instale mods e plugins, construa mundos personalizados e convide quantos jogadores quiser. A qualidade da infraestrutura faz toda a diferença na experiência.</p>
+        </div>
+        <div class="fade-up">
+          <h2>Por que a latência importa no Minecraft?</h2>
+          <p>A latência (ping) é o tempo que um dado leva do seu PC ao servidor e de volta. No Minecraft, alta latência causa lag: blocos que demoram para quebrar, mobs que se teletransportam, experiência frustrante. Com a End Hosting localizada no Brasil, jogadores experimentam pings de 10–30ms — contra 180ms+ em servidores nos EUA.</p>
+        </div>
+        <div class="fade-up">
+          <h2>Xeon ou Ryzen 7: qual escolher?</h2>
+          <p>Os planos Xeon oferecem excelente custo-benefício para servidores de pequeno e médio porte. Os planos Ryzen 7 são para comunidades maiores com muitos plugins, pois o Ryzen 7 possui frequências de clock mais altas — crucial para o Minecraft Java, que é altamente single-threaded. Não tem certeza? Use nosso <a href="minecraft.html" style="color:var(--blue-light)">seletor de planos</a> ou fale com o suporte.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       FAQ PREVIEW
+  ════════════════════════════════════════ -->
+  <section class="section" aria-labelledby="faq-home">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="label">FAQ</span>
+        <h2 id="faq-home">Perguntas frequentes</h2>
+        <p>Tire suas principais dúvidas sobre hospedagem Minecraft com a End Hosting.</p>
+      </div>
+
+      <div class="faq-list fade-up">
+        <div class="faq-item">
+          <div class="faq-q"><h4>Quanto tempo leva para meu servidor ficar online?</h4><div class="faq-icon-wrap"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
+          <div class="faq-a"><div class="faq-a-inner">Após a confirmação do pagamento, seu servidor é ativado automaticamente em menos de 2 segundos. Você receberá os dados de acesso por e-mail imediatamente. Pagamentos via Pix têm confirmação instantânea.</div></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q"><h4>Posso instalar mods e plugins no meu servidor?</h4><div class="faq-icon-wrap"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
+          <div class="faq-a"><div class="faq-a-inner">Sim! Nosso painel Pterodactyl suporta Paper, Spigot, Forge, Fabric e muito mais com um clique. Você tem acesso FTP/SFTP completo para enviar qualquer arquivo.</div></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q"><h4>O que é proteção DDoS e por que preciso dela?</h4><div class="faq-icon-wrap"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
+          <div class="faq-a"><div class="faq-a-inner">Um ataque DDoS tenta derrubar seu servidor enviando tráfego excessivo. Nossa proteção de 500 Gbps filtra o tráfego malicioso automaticamente, mantendo seu servidor online mesmo sob ataques intensos.</div></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q"><h4>Posso fazer upgrade do meu plano depois?</h4><div class="faq-icon-wrap"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
+          <div class="faq-a"><div class="faq-a-inner">Sim, o upgrade é feito pelo painel em menos de 1 minuto sem migração de dados. Você paga apenas a diferença proporcional dos dias restantes. Todos os arquivos são preservados.</div></div>
+        </div>
+      </div>
+
+      <div style="text-align:center;margin-top:36px" class="fade-up">
+        <a href="faq.html" class="btn btn-secondary">Ver todas as perguntas</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       FINAL CTA
+  ════════════════════════════════════════ -->
+  <section class="cta-section" aria-labelledby="cta-heading">
+    <div class="container">
+      <span class="label" style="color:#7ab4ff;letter-spacing:0.18em;">Pronto para começar?</span>
+      <h2 id="cta-heading">Seu servidor online<br>em 2 segundos.</h2>
+      <p>Mais de 1.200 servidores ativos confiam na End Hosting. Cancele quando quiser.</p>
+      <div class="cta-actions">
+        <a href="minecraft.html"     class="btn btn-primary btn-lg">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          Criar Servidor
+        </a>
+        <a href="planos-ryzen7.html" class="btn btn-ghost btn-lg">Ver Planos Premium</a>
+      </div>
+      <p class="cta-fine">Sem taxa de configuração · Pix, cartão ou boleto · Suporte 24/7 em português</p>
+    </div>
+  </section>
+
+  <!-- Component slot: footer -->
+  <footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+
+      <!-- Brand -->
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo" style="display:inline-flex;" aria-label="End Hosting">
+          <div class="nav-logo-mark" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/>
+              <line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/>
+            </svg>
+          </div>
+          <span class="nav-logo-text">End<span class="accent">Hosting</span></span>
+        </a>
+        <p>Hospedagem de servidores Minecraft e VPS com a melhor infraestrutura do Brasil. Latência mínima, uptime máximo, suporte humano 24/7.</p>
+        <div class="footer-socials">
+          <a href="https://discord.gg/endhosting" target="_blank" rel="noopener" class="footer-soc" aria-label="Discord">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.3 4.4A19.2 19.2 0 0 0 15.6 3c-.2.4-.5 1-.7 1.4a17.8 17.8 0 0 0-5.8 0C8.9 4 8.5 3.4 8.3 3A19 19 0 0 0 3.7 4.4C.5 9.4-.3 14.2.1 18.9a19.4 19.4 0 0 0 6 3c.5-.7 1-1.4 1.3-2.2-.7-.3-1.4-.6-2-1l.5-.4c3.8 1.8 8 1.8 11.8 0l.5.4c-.7.4-1.3.8-2 1 .3.8.8 1.5 1.3 2.2 2.2-.7 4.3-1.8 6-3 .5-5.4-.9-10.1-3.2-14.5zM8 15.5c-1.3 0-2.3-1.2-2.3-2.6 0-1.4 1-2.6 2.3-2.6s2.3 1.1 2.3 2.6c0 1.4-1 2.6-2.3 2.6zm7.9 0c-1.3 0-2.3-1.2-2.3-2.6 0-1.4 1-2.6 2.3-2.6s2.3 1.1 2.3 2.6c0 1.4-1 2.6-2.3 2.6z"/></svg>
+          </a>
+          <a href="https://instagram.com/endhosting" target="_blank" rel="noopener" class="footer-soc" aria-label="Instagram">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.4a4 4 0 1 1-4.9-3.9 4 4 0 0 1 4.9 3.9z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://twitter.com/endhosting" target="_blank" rel="noopener" class="footer-soc" aria-label="Twitter/X">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l16 16M4 20L20 4"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Planos -->
+      <div class="footer-col">
+        <h5>Planos</h5>
+        <ul class="footer-links">
+          <li><a href="minecraft.html"     class="footer-link">Escolher Plano</a></li>
+          <li><a href="planos-xeon.html"   class="footer-link">Servidores Xeon</a></li>
+          <li><a href="planos-ryzen7.html" class="footer-link">Servidores Ryzen 7</a></li>
+          <li><a href="planos-xeon.html"   class="footer-link">VPS Linux</a></li>
+        </ul>
+      </div>
+
+      <!-- Empresa -->
+      <div class="footer-col">
+        <h5>Empresa</h5>
+        <ul class="footer-links">
+          <li><a href="sobre.html" class="footer-link">Sobre nós</a></li>
+          <li><a href="faq.html"   class="footer-link">FAQ</a></li>
+          <li><a href="#"          class="footer-link">Status</a></li>
+          <li><a href="#"          class="footer-link">Blog</a></li>
+        </ul>
+      </div>
+
+      <!-- Suporte -->
+      <div class="footer-col">
+        <h5>Suporte</h5>
+        <ul class="footer-links">
+          <li><a href="https://discord.gg/endhosting" target="_blank" rel="noopener" class="footer-link">Discord</a></li>
+          <li><a href="#" class="footer-link">Abrir ticket</a></li>
+          <li><a href="#" class="footer-link">Base de conhecimento</a></li>
+          <li><a href="#" class="footer-link">Painel de controle</a></li>
+        </ul>
+      </div>
+
+    </div><!-- /footer-grid -->
+
+    <div class="footer-bot">
+      <span class="footer-copy">© 2024 End Hosting · Todos os direitos reservados</span>
+      <div class="footer-links-bot">
+        <a href="#" class="footer-copy" style="text-decoration:underline">Termos de Uso</a>
+        <a href="#" class="footer-copy" style="text-decoration:underline">Privacidade</a>
+        <a href="#" class="footer-copy" style="text-decoration:underline">LGPD</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating Support Button -->
+<a href="https://discord.gg/endhosting" target="_blank" rel="noopener"
+   id="float-btn" class="float-btn" aria-label="Suporte via Discord">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.3 4.4A19.2 19.2 0 0 0 15.6 3c-.2.4-.5 1-.7 1.4a17.8 17.8 0 0 0-5.8 0C8.9 4 8.5 3.4 8.3 3A19 19 0 0 0 3.7 4.4C.5 9.4-.3 14.2.1 18.9a19.4 19.4 0 0 0 6 3c.5-.7 1-1.4 1.3-2.2-.7-.3-1.4-.6-2-1l.5-.4c3.8 1.8 8 1.8 11.8 0l.5.4c-.7.4-1.3.8-2 1 .3.8.8 1.5 1.3 2.2 2.2-.7 4.3-1.8 6-3 .5-5.4-.9-10.1-3.2-14.5zM8 15.5c-1.3 0-2.3-1.2-2.3-2.6 0-1.4 1-2.6 2.3-2.6s2.3 1.1 2.3 2.6c0 1.4-1 2.6-2.3 2.6zm7.9 0c-1.3 0-2.3-1.2-2.3-2.6 0-1.4 1-2.6 2.3-2.6s2.3 1.1 2.3 2.6c0 1.4-1 2.6-2.3 2.6z"/></svg>
+  <span class="fl-label">Suporte</span>
+</a>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

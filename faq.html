@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="theme-color" content="#0f0a1f"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FAQ — Perguntas Frequentes sobre Hospedagem Minecraft | End Hosting</title>
+  <meta name="description" content="Tire todas as suas dúvidas sobre hospedagem de servidores Minecraft e VPS com a End Hosting. DDoS, planos, ativação, mods, Xeon vs Ryzen e muito mais."/>
+  <meta name="keywords" content="faq hospedagem minecraft, duvidas servidor minecraft, o que e ddos, hospedagem vps minecraft, end hosting suporte"/>
+  <link rel="canonical" href="https://endhosting.com.br/faq.html"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <style>
+    /* Schema.org JSON-LD */
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Quanto tempo leva para meu servidor ficar online?", "acceptedAnswer": { "@type": "Answer", "text": "Após a confirmação do pagamento, seu servidor é ativado automaticamente em menos de 2 segundos. Pagamentos via Pix têm confirmação instantânea." } },
+      { "@type": "Question", "name": "O que é proteção DDoS?", "acceptedAnswer": { "@type": "Answer", "text": "DDoS (Distributed Denial of Service) é um tipo de ataque que tenta derrubar seu servidor enviando tráfego excessivo. Nossa proteção de 500 Gbps filtra esse tráfego automaticamente, mantendo seu servidor online." } },
+      { "@type": "Question", "name": "Qual a diferença entre os planos Xeon e Ryzen 7?", "acceptedAnswer": { "@type": "Answer", "text": "Xeon oferece melhor custo-benefício e estabilidade para servidores pequenos e médios. Ryzen 7 tem clock mais alto (5,4 GHz) para máxima performance single-thread, ideal para servidores maiores, modpacks e networks." } }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <div id="scroll-bar" aria-hidden="true"></div>
+
+<nav class="nav" role="navigation" aria-label="Navegação principal">
+  <div class="nav-inner">
+
+    <!-- Logo -->
+    <a href="index.html" class="nav-logo" aria-label="End Hosting – Página inicial">
+      <div class="nav-logo-mark" aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/>
+          <line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/>
+        </svg>
+      </div>
+      <span class="nav-logo-text">End<span class="accent">Hosting</span></span>
+    </a>
+
+    <!-- Desktop links -->
+    <ul class="nav-links" role="list">
+      <li>
+        <a href="index.html" class="nav-link">Início</a>
+      </li>
+
+      <!-- Dropdown: Hospedagem de Minecraft -->
+      <li class="nav-dropdown">
+        <a href="minecraft.html" class="nav-link" tabindex="0" aria-haspopup="true" aria-expanded="false">
+          Minecraft
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </a>
+        <div class="dropdown-menu" role="menu">
+          <a href="minecraft.html" class="dropdown-item" role="menuitem">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Escolher Plano
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="planos-xeon.html" class="dropdown-item" role="menuitem">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3M3 3l18 0 0 18H3z"/></svg>
+            Planos Xeon
+          </a>
+          <a href="planos-ryzen7.html" class="dropdown-item" role="menuitem">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+            Planos Ryzen 7
+          </a>
+        </div>
+      </li>
+
+      <li><a href="sobre.html" class="nav-link">Sobre</a></li>
+      <li><a href="faq.html"   class="nav-link">FAQ</a></li>
+    </ul>
+
+    <!-- Actions -->
+    <div class="nav-actions">
+      <button class="theme-btn" onclick="toggleTheme()" aria-label="Alternar tema">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+
+      <a href="https://discord.gg/endhosting" target="_blank" rel="noopener" class="btn-discord" aria-label="Entrar no Discord da End Hosting">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.3 4.4A19.2 19.2 0 0 0 15.6 3c-.2.4-.5 1-.7 1.4a17.8 17.8 0 0 0-5.8 0C8.9 4 8.5 3.4 8.3 3A19 19 0 0 0 3.7 4.4C.5 9.4-.3 14.2.1 18.9a19.4 19.4 0 0 0 6 3c.5-.7 1-1.4 1.3-2.2-.7-.3-1.4-.6-2-1l.5-.4c3.8 1.8 8 1.8 11.8 0l.5.4c-.7.4-1.3.8-2 1 .3.8.8 1.5 1.3 2.2 2.2-.7 4.3-1.8 6-3 .5-5.4-.9-10.1-3.2-14.5zM8 15.5c-1.3 0-2.3-1.2-2.3-2.6 0-1.4 1-2.6 2.3-2.6s2.3 1.1 2.3 2.6c0 1.4-1 2.6-2.3 2.6zm7.9 0c-1.3 0-2.3-1.2-2.3-2.6 0-1.4 1-2.6 2.3-2.6s2.3 1.1 2.3 2.6c0 1.4-1 2.6-2.3 2.6z"/></svg>
+        Discord
+      </a>
+
+      <a href="minecraft.html" class="btn btn-primary btn-sm">Criar Servidor</a>
+
+      <button class="hamburger" aria-expanded="false" aria-label="Abrir menu" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Menu mobile">
+    <a href="index.html"         class="nav-link">Início</a>
+
+    <div class="nav-link" style="cursor:default;opacity:0.55;font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;font-family:'JetBrains Mono',monospace;padding:10px 16px 4px;">
+      Minecraft
+    </div>
+    <div class="mobile-sub">
+      <a href="minecraft.html"     class="nav-link">Escolher Plano</a>
+      <a href="planos-xeon.html"   class="nav-link">Planos Xeon</a>
+      <a href="planos-ryzen7.html" class="nav-link">Planos Ryzen 7</a>
+    </div>
+
+    <div class="mobile-menu-divider"></div>
+    <a href="sobre.html"           class="nav-link">Sobre</a>
+    <a href="faq.html"             class="nav-link">FAQ</a>
+
+    <a href="https://discord.gg/endhosting" target="_blank" rel="noopener" class="btn-discord">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.3 4.4A19.2 19.2 0 0 0 15.6 3c-.2.4-.5 1-.7 1.4a17.8 17.8 0 0 0-5.8 0C8.9 4 8.5 3.4 8.3 3A19 19 0 0 0 3.7 4.4C.5 9.4-.3 14.2.1 18.9a19.4 19.4 0 0 0 6 3c.5-.7 1-1.4 1.3-2.2-.7-.3-1.4-.6-2-1l.5-.4c3.8 1.8 8 1.8 11.8 0l.5.4c-.7.4-1.3.8-2 1 .3.8.8 1.5 1.3 2.2 2.2-.7 4.3-1.8 6-3 .5-5.4-.9-10.1-3.2-14.5zM8 15.5c-1.3 0-2.3-1.2-2.3-2.6 0-1.4 1-2.6 2.3-2.6s2.3 1.1 2.3 2.6c0 1.4-1 2.6-2.3 2.6zm7.9 0c-1.3 0-2.3-1.2-2.3-2.6 0-1.4 1-2.6 2.3-2.6s2.3 1.1 2.3 2.6c0 1.4-1 2.6-2.3 2.6z"/></svg>
+      Entrar no Discord
+    </a>
+  </nav>
+</nav>
+
+  <!-- ════════════════════════════════════════
+       PAGE HEADER
+  ════════════════════════════════════════ -->
+  <header class="page-header" aria-labelledby="faq-h1">
+    <div class="container">
+      <span class="label">Central de ajuda</span>
+      <h1 id="faq-h1">Perguntas <em>frequentes</em></h1>
+      <p>Tudo o que você precisa saber sobre hospedagem Minecraft, VPS e os serviços da End Hosting. Não encontrou sua resposta? Fale diretamente com nossa equipe no Discord.</p>
+    </div>
+  </header>
+
+  <!-- ════════════════════════════════════════
+       FAQ SECTION
+  ════════════════════════════════════════ -->
+  <section class="section" aria-labelledby="faq-main-h2">
+    <div class="container">
+      <h2 id="faq-main-h2" class="sr-only">Perguntas e respostas</h2>
+
+      <!-- Category filter -->
+      <nav class="faq-categories fade-up" aria-label="Filtrar perguntas por categoria">
+        <button class="faq-cat active" onclick="filterFAQ('all',this)" aria-pressed="true">Todas</button>
+        <button class="faq-cat" onclick="filterFAQ('inicio',this)" aria-pressed="false">Primeiros passos</button>
+        <button class="faq-cat" onclick="filterFAQ('planos',this)" aria-pressed="false">Planos e preços</button>
+        <button class="faq-cat" onclick="filterFAQ('tecnico',this)" aria-pressed="false">Técnico</button>
+        <button class="faq-cat" onclick="filterFAQ('seguranca',this)" aria-pressed="false">Segurança</button>
+      </nav>
+
+      <div class="faq-list fade-up" id="faq-main">
+
+        <!-- ── INÍCIO ── -->
+        <div class="faq-item" data-cat="inicio">
+          <div class="faq-q" role="button" tabindex="0" aria-expanded="false">
+            <h4>O que é hospedagem de servidor Minecraft?</h4>
+            <span class="faq-icon-wrap" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </span>
+          </div>
+          <div class="faq-a">
+            <div class="faq-a-inner">
+              <p>Hospedagem de servidor Minecraft é um serviço que disponibiliza um servidor dedicado ou virtual para rodar seu mundo Minecraft 24 horas por dia, 7 dias por semana — sem precisar deixar seu próprio computador ligado.</p>
+              <p>Com a End Hosting, você recebe um servidor com RAM, CPU e storage dedicados, proteção DDoS de 500 Gbps e painel de controle Pterodactyl para gerenciar tudo facilmente. Seu servidor fica disponível para seus jogadores a qualquer hora, mesmo quando você está offline.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item" data-cat="inicio">
+          <div class="faq-q" role="button" tabindex="0" aria-expanded="false">
+            <h4>Quanto tempo leva para meu servidor ficar online após a compra?</h4>
+            <span class="faq-icon-wrap" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </span>
+          </div>
+          <div class="faq-a">
+            <div class="faq-a-inner">O deploy na End Hosting é 100% automático. Após a confirmação do pagamento — instantânea via Pix ou cartão — seu servidor é criado e configurado em menos de 2 segundos. Você receberá os dados de acesso ao painel por e-mail imediatamente.</div>
+          </div>
+        </div>
+
+        <div class="faq-item" data-cat="inicio">
+          <div class="faq-q" role="button" tabindex="0" aria-expanded="false">
+            <h4>Qual versão do Minecraft posso usar?</h4>
+            <span class="faq-icon-wrap" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </span>
+          </div>
+          <div class="faq-a">
+            <div class="faq-a-inner">
+              <p>Suportamos todas as versões do Minecraft Java Edition (1.8 até as mais recentes) e Bedrock Edition. Você pode trocar a versão pelo painel a qualquer momento, sem custo adicional.</p>
+              <p>Tipos de servidor suportados com instalação em 1 clique: Vanilla, Paper, Spigot, Purpur, Forge, NeoForge, Fabric, BungeeCord, Velocity, Waterfall e mais.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item" data-cat="inicio">
+          <div class="faq-q" role="button" tabindex="0" aria-expanded="false">
+            <h4>Posso instalar mods e plugins no meu servidor?</h4>
+            <span class="faq-icon-wrap" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </span>
+          </div>
+          <div class="faq-a">
+            <div class="faq-a-inner">Sim, você tem total liberdade. O painel Pterodactyl permite upload via FTP/SFTP, instaladores automáticos para modpacks da CurseForge e Modrinth, e acesso completo a todos os arquivos e diretórios do servidor. Não há restrições de plugins ou mods.</div>
+          </div>
+        </div>
+
+        <!-- ── PLANOS ── -->
+        <div class="faq-item" data-cat="planos">
+          <div class="faq-q" role="button" tabindex="0" aria-expanded="false">
+            <h4>Qual a diferença entre os planos Xeon e Ryzen 7?</h4>
+            <span class="faq-icon-wrap" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </span>
+          </div>
+          <div class="faq-a">
+            <div class="faq-a-inner">
+              <p><strong>Planos Xeon:</strong> Melhor custo-benefício. Hardware Intel Xeon com DDR4 ECC, excelente estabilidade, ideal para servidores pequenos e médios de até 250 jogadores. Recomendado para quem está começando ou tem orçamento limitado.</p>
+              <p><strong>Planos Ryzen 7:</strong> Máxima performance single-thread. AMD Ryzen 7 com clock de 5,4 GHz, DDR5 e NVMe Gen4. Essencial para networks, modpacks pesados e comunidades acima de 100 jogadores com muitos plugins. O Minecraft se beneficia muito do clock alto porque é uma aplicação fortemente single-threaded.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item" data-cat="planos">
+          <div class="faq-q" role="button" tabindex="0" aria-expanded="false">
+            <h4>Posso fazer upgrade ou downgrade do meu plano?</h4>
+            <span class="faq-icon-wrap" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </span>
+          </div>
+          <div class="faq-a">
+            <div class="faq-a-inner">Sim! Upgrades e downgrades são feitos diretamente no painel, geralmente em menos de 1 minuto. Para upgrades, você paga apenas a diferença proporcional dos dias restantes do mês. Todos os arquivos, configurações e mundos são preservados durante a migração — sem perda de dados.</div>
+          </div>
+        </div>
+
+        <div class="faq-item" data-cat="planos">
+          <div class="faq-q" role="button" tabindex="0" aria-expanded="false">
+            <h4>Quais formas de pagamento são aceitas?</h4>
+            <span class="faq-icon-wrap" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </span>
+          </div>
+          <div class="faq-a">
+            <div class="faq-a-inner">Aceitamos <strong>Pix</strong> (confirmação e ativação instantânea), <strong>cartão de crédito</strong> em até 12x sem juros e <strong>boleto bancário</strong>. Pix é o método mais rápido pois garante ativação imediata do servidor. Não há taxa de ativação ou configuração em nenhum método.</div>
+          </div>
+        </div>
+
+        <div class="faq-item" data-cat="planos">
+          <div class="faq-q" role="button" tabindex="0" aria-expanded="false">
+            <h4>Existe contrato de fidelidade ou taxa de cancelamento?</h4>
+            <span class="faq-icon-wrap" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </span>
+          </div>
+          <div class="faq-a">
+            <div class="faq-a-inner">Não há contrato de fidelidade. Todos os planos são mensais e podem ser cancelados a qualquer momento pelo painel, sem multas ou taxas. Após o cancelamento, o servidor permanece ativo até o final do período já pago.</div>
+          </div>
+        </div>
+
+        <div class="faq-item" data-cat="planos">
+          <div class="faq-q" role="button" tabindex="0" aria-expanded="false">
+            <h4>A End Hosting oferece VPS Linux além de servidores Minecraft?</h4>
+            <span class="faq-icon-wrap" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </span>
+          </div>
+          <div class="faq-a">
+            <div class="faq-a-inner">Sim! Nossos servidores também podem ser configurados como VPS Linux para qualquer uso: sites, APIs, bots Discord, aplicações web e muito mais. Oferecemos imagens de Ubuntu, Debian e CentOS. Entre em contato com nosso suporte para configurar seu VPS personalizado.</div>
+          </div>
+        </div>
+
+        <!-- ── TÉCNICO ── -->
+        <div class="faq-item" data-cat="tecnico">
+          <div class="faq-q" role="button" tabindex="0" aria-expanded="false">
+            <h4>Qual painel de controle vocês utilizam?</h4>
+            <span class="faq-icon-wrap" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </span>
+          </div>
+          <div class="faq-a">
+            <div class="faq-a-inner">
+              <p>Utilizamos o <strong>Pterodactyl Panel</strong>, o painel open-source mais confiável e utilizado para hospedagem de servidores de jogos. Com ele você pode:</p>
+              <ul style="margin:10px 0 0 16px;color:var(--text-secondary);font-size:0.91rem;line-height:1.8;">
+                <li>Iniciar, parar e reiniciar o servidor</li>
+                <li>Enviar comandos pelo console em tempo real</li>
+                <li>Gerenciar arquivos via interface web ou FTP/SFTP</li>
+                <li>Instalar versões e tipos de servidor com 1 clique</li>
+                <li>Monitorar CPU, RAM e disco em tempo real</li>
+                <li>Criar e restaurar backups</li>
+                <li>Gerenciar subdomínios e configurações de rede</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item" data-cat="tecnico">
+          <div class="faq-q" role="button" tabindex="0" aria-expanded="false">
+            <h4>O que é TPS e por que é importante?</h4>
+            <span class="faq-icon-wrap" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </span>
+          </div>
+          <div class="faq-a">
+            <div class="faq-a-inner">
+              <p>TPS (Ticks Per Second) é a métrica que mede quantas "rodadas" de processamento o servidor Minecraft executa por segundo. O valor ideal é 20 TPS. Quando o TPS cai abaixo de 20, jogadores percebem lag: mobs que congelam, blocos que demoram para quebrar, redstone errática.</p>
+              <p>Nossos planos são dimensionados para manter o TPS próximo de 20 mesmo sob carga. Os planos Ryzen 7, em especial, são superiores nesse quesito graças ao clock mais alto que processa mais eventos por tick.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item" data-cat="tecnico">
+          <div class="faq-q" role="button" tabindex="0" aria-expanded="false">
+            <h4>Os backups são automáticos? Com que frequência?</h4>
+            <span class="faq-icon-wrap" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </span>
+          </div>
+          <div class="faq-a">
+            <div class="faq-a-inner">Sim, todos os planos incluem backups automáticos diários. A retenção varia por plano: 7 dias nos planos básicos, até 30 dias nos planos Pro e Elite. Você pode restaurar qualquer backup com um clique pelo painel, sem custo adicional. Backups manuais também são permitidos a qualquer momento.</div>
+          </div>
+        </div>
+
+        <div class="faq-item" data-cat="tecnico">
+          <div class="faq-q" role="button" tabindex="0" aria-expanded="false">
+            <h4>Tenho acesso FTP ao servidor?</h4>
+            <span class="faq-icon-wrap" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </span>
+          </div>
+          <div class="faq-a">
+            <div class="faq-a-inner">Sim, você tem acesso SFTP completo ao servidor. Pode enviar e baixar arquivos com qualquer cliente como FileZilla, WinSCP ou o gerenciador de arquivos integrado ao Pterodactyl. Não há restrições de arquivos ou diretórios — você é o administrador completo do seu servidor.</div>
+          </div>
+        </div>
+
+        <!-- ── SEGURANÇA ── -->
+        <div class="faq-item" data-cat="seguranca">
+          <div class="faq-q" role="button" tabindex="0" aria-expanded="false">
+            <h4>O que é proteção DDoS e por que preciso dela?</h4>
+            <span class="faq-icon-wrap" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </span>
+          </div>
+          <div class="faq-a">
+            <div class="faq-a-inner">
+              <p>Um ataque DDoS (Distributed Denial of Service) tenta derrubar seu servidor enviando um volume massivo de tráfego simultâneo, sobrecarregando a rede e tornando o servidor inacessível para jogadores legítimos. Esses ataques são muito comuns em servidores Minecraft, especialmente em comunidades competitivas.</p>
+              <p>Nossa proteção DDoS de 500 Gbps filtra e absorve o tráfego malicioso automaticamente, antes que chegue ao seu servidor — mantendo-o online e protegido 24/7, sem intervenção manual necessária.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item" data-cat="seguranca">
+          <div class="faq-q" role="button" tabindex="0" aria-expanded="false">
+            <h4>Qual é o uptime garantido da End Hosting?</h4>
+            <span class="faq-icon-wrap" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </span>
+          </div>
+          <div class="faq-a">
+            <div class="faq-a-inner">Garantimos 99,9% de uptime em toda nossa infraestrutura, equivalente a menos de 9 horas de indisponibilidade por ano. Em caso de falha de hardware, realizamos migração automática para nó alternativo, minimizando o tempo de inatividade. Você pode acompanhar o status em tempo real em nossa página de status.</div>
+          </div>
+        </div>
+
+        <div class="faq-item" data-cat="seguranca">
+          <div class="faq-q" role="button" tabindex="0" aria-expanded="false">
+            <h4>Meus dados e o mundo do servidor estão seguros?</h4>
+            <span class="faq-icon-wrap" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </span>
+          </div>
+          <div class="faq-a">
+            <div class="faq-a-inner">Sim. Todos os dados são armazenados em data centers certificados no Brasil com controles físicos e digitais rigorosos. Utilizamos criptografia em trânsito (TLS/SSL), backups redundantes em múltiplos discos e nossa política de privacidade está em conformidade com a LGPD. Seus mundos e dados nunca são acessados por terceiros.</div>
+          </div>
+        </div>
+
+      </div><!-- /faq-list -->
+
+      <!-- Support CTA -->
+      <div class="fade-up" style="margin-top:56px;">
+        <div style="background:linear-gradient(145deg,var(--bg-surface),var(--bg-card));border:1px solid var(--border);border-radius:var(--r-lg);padding:40px 32px;max-width:580px;margin:0 auto;text-align:center;">
+          <div style="width:56px;height:56px;border-radius:50%;background:var(--grad);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;box-shadow:var(--glow-md);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="color:#fff;"><path d="M20.3 4.4A19.2 19.2 0 0 0 15.6 3c-.2.4-.5 1-.7 1.4a17.8 17.8 0 0 0-5.8 0C8.9 4 8.5 3.4 8.3 3A19 19 0 0 0 3.7 4.4C.5 9.4-.3 14.2.1 18.9a19.4 19.4 0 0 0 6 3c.5-.7 1-1.4 1.3-2.2-.7-.3-1.4-.6-2-1l.5-.4c3.8 1.8 8 1.8 11.8 0l.5.4c-.7.4-1.3.8-2 1 .3.8.8 1.5 1.3 2.2 2.2-.7 4.3-1.8 6-3 .5-5.4-.9-10.1-3.2-14.5zM8 15.5c-1.3 0-2.3-1.2-2.3-2.6 0-1.4 1-2.6 2.3-2.6s2.3 1.1 2.3 2.6c0 1.4-1 2.6-2.3 2.6zm7.9 0c-1.3 0-2.3-1.2-2.3-2.6 0-1.4 1-2.6 2.3-2.6s2.3 1.1 2.3 2.6c0 1.4-1 2.6-2.3 2.6z"/></svg>
+          </div>
+          <h3 style="font-size:1.25rem;margin-bottom:10px;">Não encontrou sua resposta?</h3>
+          <p style="color:var(--text-secondary);font-size:0.9rem;margin-bottom:24px;">Nossa equipe responde em menos de 5 minutos no Discord, 24 horas por dia, 7 dias por semana. Também temos suporte via ticket.</p>
+          <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+            <a href="https://discord.gg/endhosting" target="_blank" rel="noopener" class="btn btn-primary">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.3 4.4A19.2 19.2 0 0 0 15.6 3c-.2.4-.5 1-.7 1.4a17.8 17.8 0 0 0-5.8 0C8.9 4 8.5 3.4 8.3 3A19 19 0 0 0 3.7 4.4C.5 9.4-.3 14.2.1 18.9a19.4 19.4 0 0 0 6 3c.5-.7 1-1.4 1.3-2.2-.7-.3-1.4-.6-2-1l.5-.4c3.8 1.8 8 1.8 11.8 0l.5.4c-.7.4-1.3.8-2 1 .3.8.8 1.5 1.3 2.2 2.2-.7 4.3-1.8 6-3 .5-5.4-.9-10.1-3.2-14.5zM8 15.5c-1.3 0-2.3-1.2-2.3-2.6 0-1.4 1-2.6 2.3-2.6s2.3 1.1 2.3 2.6c0 1.4-1 2.6-2.3 2.6zm7.9 0c-1.3 0-2.3-1.2-2.3-2.6 0-1.4 1-2.6 2.3-2.6s2.3 1.1 2.3 2.6c0 1.4-1 2.6-2.3 2.6z"/></svg>
+              Entrar no Discord
+            </a>
+            <a href="minecraft.html" class="btn btn-secondary">Abrir ticket</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       CTA
+  ════════════════════════════════════════ -->
+  <section class="cta-section" aria-labelledby="cta-h2">
+    <div class="container">
+      <span class="label" style="color:#7ab4ff;">Pronto para começar?</span>
+      <h2 id="cta-h2">Crie seu servidor Minecraft agora</h2>
+      <p>Deploy em 2 segundos. DDoS 500 Gbps incluído. Suporte 24/7 em português.</p>
+      <div class="cta-actions">
+        <a href="planos-xeon.html" class="btn btn-primary btn-lg">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3"/></svg>
+          Planos Xeon
+        </a>
+        <a href="planos-ryzen7.html" class="btn btn-ghost">
+          Planos Ryzen 7
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+
+      <!-- Brand -->
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo" style="display:inline-flex;" aria-label="End Hosting">
+          <div class="nav-logo-mark" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/>
+              <line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/>
+            </svg>
+          </div>
+          <span class="nav-logo-text">End<span class="accent">Hosting</span></span>
+        </a>
+        <p>Hospedagem de servidores Minecraft e VPS com a melhor infraestrutura do Brasil. Latência mínima, uptime máximo, suporte humano 24/7.</p>
+        <div class="footer-socials">
+          <a href="https://discord.gg/endhosting" target="_blank" rel="noopener" class="footer-soc" aria-label="Discord">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.3 4.4A19.2 19.2 0 0 0 15.6 3c-.2.4-.5 1-.7 1.4a17.8 17.8 0 0 0-5.8 0C8.9 4 8.5 3.4 8.3 3A19 19 0 0 0 3.7 4.4C.5 9.4-.3 14.2.1 18.9a19.4 19.4 0 0 0 6 3c.5-.7 1-1.4 1.3-2.2-.7-.3-1.4-.6-2-1l.5-.4c3.8 1.8 8 1.8 11.8 0l.5.4c-.7.4-1.3.8-2 1 .3.8.8 1.5 1.3 2.2 2.2-.7 4.3-1.8 6-3 .5-5.4-.9-10.1-3.2-14.5zM8 15.5c-1.3 0-2.3-1.2-2.3-2.6 0-1.4 1-2.6 2.3-2.6s2.3 1.1 2.3 2.6c0 1.4-1 2.6-2.3 2.6zm7.9 0c-1.3 0-2.3-1.2-2.3-2.6 0-1.4 1-2.6 2.3-2.6s2.3 1.1 2.3 2.6c0 1.4-1 2.6-2.3 2.6z"/></svg>
+          </a>
+          <a href="https://instagram.com/endhosting" target="_blank" rel="noopener" class="footer-soc" aria-label="Instagram">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.4a4 4 0 1 1-4.9-3.9 4 4 0 0 1 4.9 3.9z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://twitter.com/endhosting" target="_blank" rel="noopener" class="footer-soc" aria-label="Twitter/X">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l16 16M4 20L20 4"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Planos -->
+      <div class="footer-col">
+        <h5>Planos</h5>
+        <ul class="footer-links">
+          <li><a href="minecraft.html"     class="footer-link">Escolher Plano</a></li>
+          <li><a href="planos-xeon.html"   class="footer-link">Servidores Xeon</a></li>
+          <li><a href="planos-ryzen7.html" class="footer-link">Servidores Ryzen 7</a></li>
+          <li><a href="planos-xeon.html"   class="footer-link">VPS Linux</a></li>
+        </ul>
+      </div>
+
+      <!-- Empresa -->
+      <div class="footer-col">
+        <h5>Empresa</h5>
+        <ul class="footer-links">
+          <li><a href="sobre.html" class="footer-link">Sobre nós</a></li>
+          <li><a href="faq.html"   class="footer-link">FAQ</a></li>
+          <li><a href="#"          class="footer-link">Status</a></li>
+          <li><a href="#"          class="footer-link">Blog</a></li>
+        </ul>
+      </div>
+
+      <!-- Suporte -->
+      <div class="footer-col">
+        <h5>Suporte</h5>
+        <ul class="footer-links">
+          <li><a href="https://discord.gg/endhosting" target="_blank" rel="noopener" class="footer-link">Discord</a></li>
+          <li><a href="#" class="footer-link">Abrir ticket</a></li>
+          <li><a href="#" class="footer-link">Base de conhecimento</a></li>
+          <li><a href="#" class="footer-link">Painel de controle</a></li>
+        </ul>
+      </div>
+
+    </div><!-- /footer-grid -->
+
+    <div class="footer-bot">
+      <span class="footer-copy">© 2024 End Hosting · Todos os direitos reservados</span>
+      <div class="footer-links-bot">
+        <a href="#" class="footer-copy" style="text-decoration:underline">Termos de Uso</a>
+        <a href="#" class="footer-copy" style="text-decoration:underline">Privacidade</a>
+        <a href="#" class="footer-copy" style="text-decoration:underline">LGPD</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating Support Button -->
+<a href="https://discord.gg/endhosting" target="_blank" rel="noopener"
+   id="float-btn" class="float-btn" aria-label="Suporte via Discord">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.3 4.4A19.2 19.2 0 0 0 15.6 3c-.2.4-.5 1-.7 1.4a17.8 17.8 0 0 0-5.8 0C8.9 4 8.5 3.4 8.3 3A19 19 0 0 0 3.7 4.4C.5 9.4-.3 14.2.1 18.9a19.4 19.4 0 0 0 6 3c.5-.7 1-1.4 1.3-2.2-.7-.3-1.4-.6-2-1l.5-.4c3.8 1.8 8 1.8 11.8 0l.5.4c-.7.4-1.3.8-2 1 .3.8.8 1.5 1.3 2.2 2.2-.7 4.3-1.8 6-3 .5-5.4-.9-10.1-3.2-14.5zM8 15.5c-1.3 0-2.3-1.2-2.3-2.6 0-1.4 1-2.6 2.3-2.6s2.3 1.1 2.3 2.6c0 1.4-1 2.6-2.3 2.6zm7.9 0c-1.3 0-2.3-1.2-2.3-2.6 0-1.4 1-2.6 2.3-2.6s2.3 1.1 2.3 2.6c0 1.4-1 2.6-2.3 2.6z"/></svg>
+  <span class="fl-label">Suporte</span>
+</a>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="theme-color" content="#0f0a1f"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Seletor de Plano Minecraft — End Hosting</title>
+  <meta name="description" content="Responda 3 perguntas e descubra o plano de hospedagem Minecraft ideal para você na End Hosting. Xeon ou Ryzen 7, do tamanho certo."/>
+  <link rel="canonical" href="https://endhosting.com.br/minecraft.html"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <style>
+    body { background: var(--dark-bg); }
+
+    /* ── Wizard page ── */
+    .wiz-page {
+      min-height: 100vh;
+      padding: 120px 0 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    .wiz-page::before {
+      content: '';
+      position: absolute; inset: 0; z-index: 0; pointer-events: none;
+      background:
+        radial-gradient(ellipse 75% 60% at 65% 30%, rgba(0,93,245,0.18) 0%, transparent 70%),
+        radial-gradient(ellipse 50% 45% at 15% 80%, rgba(100,64,224,0.14) 0%, transparent 70%);
+    }
+    .wiz-page::after {
+      content: '';
+      position: absolute; inset: 0; z-index: 0; pointer-events: none;
+      background-image:
+        linear-gradient(rgba(0,93,245,0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,93,245,0.06) 1px, transparent 1px);
+      background-size: 52px 52px;
+      -webkit-mask-image: radial-gradient(ellipse 90% 80% at 50% 50%, black 20%, transparent 100%);
+      mask-image: radial-gradient(ellipse 90% 80% at 50% 50%, black 20%, transparent 100%);
+    }
+    .wiz-inner {
+      position: relative; z-index: 1;
+      max-width: 800px; margin: 0 auto; padding: 0 24px;
+    }
+
+    /* Header */
+    .wiz-head { text-align: center; margin-bottom: 52px; }
+    .wiz-head h1 {
+      color: #fff; font-size: clamp(2rem, 5vw, 3rem);
+      margin: 12px 0 14px;
+      text-shadow: 0 0 50px rgba(0,93,245,0.28);
+    }
+    .wiz-head h1 em {
+      font-style: normal;
+      background: linear-gradient(90deg, #4d9fff, #a78bff);
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .wiz-head p { color: rgba(255,255,255,0.48); font-size: 0.97rem; }
+
+    /* ── Progress stepper ── */
+    .wiz-progress {
+      display: flex; align-items: flex-start; justify-content: center;
+      gap: 0; margin-bottom: 52px; position: relative;
+    }
+    .wiz-progress::before {
+      content: '';
+      position: absolute;
+      top: 19px; left: calc(12.5% + 20px); right: calc(12.5% + 20px);
+      height: 1px; background: rgba(0,93,245,0.22);
+    }
+    .wiz-track {
+      position: absolute;
+      top: 19px; left: calc(12.5% + 20px);
+      height: 1px; width: 0%;
+      background: linear-gradient(90deg, #005df5, #6440e0);
+      box-shadow: 0 0 8px rgba(0,93,245,0.55);
+      transition: width 0.45s cubic-bezier(0.4,0,0.2,1);
+    }
+    .wiz-step-btn {
+      display: flex; flex-direction: column; align-items: center; gap: 8px;
+      width: 25%; background: none; border: none; cursor: pointer;
+      position: relative; z-index: 1; padding: 0;
+    }
+    .wiz-circle {
+      width: 40px; height: 40px; border-radius: 50%;
+      background: rgba(15,10,31,0.9);
+      border: 2px solid rgba(0,93,245,0.25);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.78rem; font-weight: 700;
+      color: rgba(255,255,255,0.30);
+      transition: all 0.3s;
+    }
+    .wiz-step-btn.active .wiz-circle {
+      border-color: #4d9fff; color: #7ab4ff;
+      background: rgba(0,93,245,0.14);
+      box-shadow: 0 0 20px rgba(0,93,245,0.40);
+    }
+    .wiz-step-btn.done .wiz-circle {
+      background: linear-gradient(135deg, #005df5, #6440e0);
+      border-color: transparent; color: #fff;
+      box-shadow: 0 0 16px rgba(0,93,245,0.50);
+    }
+    .wiz-lbl {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.60rem; letter-spacing: 0.08em;
+      color: rgba(255,255,255,0.25);
+      transition: color 0.3s;
+    }
+    .wiz-step-btn.active .wiz-lbl { color: #7ab4ff; }
+    .wiz-step-btn.done   .wiz-lbl { color: rgba(255,255,255,0.55); }
+
+    /* ── Panels ── */
+    .wiz-panels { min-height: 380px; }
+    .wiz-panel  { display: none; }
+    .wiz-panel.active {
+      display: block;
+      animation: panelIn 0.35s cubic-bezier(0.4,0,0.2,1);
+    }
+    @keyframes panelIn {
+      from { opacity: 0; transform: translateX(24px); }
+      to   { opacity: 1; transform: translateX(0); }
+    }
+    .wiz-panel.back {
+      animation: panelBack 0.35s cubic-bezier(0.4,0,0.2,1);
+    }
+    @keyframes panelBack {
+      from { opacity: 0; transform: translateX(-24px); }
+      to   { opacity: 1; transform: translateX(0); }
+    }
+    .wiz-panel h2 {
+      color: #fff; font-size: clamp(1.5rem, 3vw, 2rem); margin-bottom: 6px;
+    }
+    .wiz-sub {
+      color: rgba(255,255,255,0.42); font-size: 0.9rem; margin-bottom: 36px;
+    }
+
+    /* ── Option cards ── */
+    .opt-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 14px; margin-bottom: 40px;
+    }
+    .opt-card {
+      background: rgba(15,10,31,0.80);
+      border: 1.5px solid rgba(0,93,245,0.20);
+      border-radius: 12px; padding: 24px 18px;
+      text-align: center; cursor: pointer;
+      transition: all 0.2s; position: relative; overflow: hidden;
+    }
+    .opt-card::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(0,93,245,0.08), rgba(100,64,224,0.06));
+      opacity: 0; transition: opacity 0.2s;
+    }
+    .opt-card:hover {
+      border-color: rgba(0,93,245,0.55);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(0,93,245,0.20);
+    }
+    .opt-card:hover::after { opacity: 1; }
+    .opt-card.sel {
+      border-color: #005df5;
+      background: rgba(0,93,245,0.12);
+      box-shadow: 0 0 0 1px #005df5, 0 0 32px rgba(0,93,245,0.28);
+    }
+    .opt-card.sel::after { opacity: 1; }
+    .opt-icon-wrap {
+      width: 60px; height: 60px; border-radius: 50%;
+      background: rgba(0,93,245,0.12);
+      border: 1px solid rgba(0,93,245,0.25);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 16px; color: #7ab4ff;
+      transition: all 0.2s; position: relative; z-index: 1;
+    }
+    .opt-card.sel .opt-icon-wrap {
+      background: linear-gradient(135deg, #005df5, #6440e0);
+      border-color: transparent; color: #fff;
+      box-shadow: 0 0 20px rgba(0,93,245,0.45);
+    }
+    .opt-title {
+      font-family: 'Rajdhani', sans-serif; font-weight: 700; font-size: 1.05rem;
+      color: rgba(255,255,255,0.88); margin-bottom: 6px;
+      position: relative; z-index: 1;
+    }
+    .opt-desc {
+      font-size: 0.75rem; color: rgba(255,255,255,0.38);
+      line-height: 1.55; position: relative; z-index: 1;
+    }
+    .opt-card.sel .opt-desc { color: rgba(255,255,255,0.58); }
+    .opt-price {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.62rem;
+      color: rgba(255,255,255,0.25); letter-spacing: 0.08em;
+      margin-top: 12px; position: relative; z-index: 1;
+    }
+
+    /* ── Slider (step 2) ── */
+    .slider-block { margin-bottom: 40px; }
+    .slider-num-big {
+      font-family: 'Rajdhani', sans-serif; font-size: 4.5rem; font-weight: 700;
+      color: #fff; line-height: 1; text-align: center;
+      text-shadow: 0 0 40px rgba(0,93,245,0.40);
+    }
+    .slider-unit {
+      text-align: center; font-size: 0.88rem;
+      color: rgba(255,255,255,0.35); margin: 6px 0 28px;
+      letter-spacing: 0.04em;
+    }
+    input[type=range].wiz-range {
+      width: 100%; -webkit-appearance: none; appearance: none;
+      height: 6px; border-radius: 6px; outline: none;
+      background: rgba(0,93,245,0.18); cursor: pointer;
+    }
+    input[type=range].wiz-range::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 24px; height: 24px; border-radius: 50%;
+      background: linear-gradient(135deg, #005df5, #6440e0);
+      box-shadow: 0 0 0 5px rgba(0,93,245,0.20), 0 0 16px rgba(0,93,245,0.45);
+      cursor: pointer; transition: transform 0.15s, box-shadow 0.15s;
+    }
+    input[type=range].wiz-range::-webkit-slider-thumb:hover {
+      transform: scale(1.15);
+    }
+    input[type=range].wiz-range::-moz-range-thumb {
+      width: 24px; height: 24px; border-radius: 50%; border: none;
+      background: linear-gradient(135deg, #005df5, #6440e0);
+    }
+    .range-labels {
+      display: flex; justify-content: space-between; margin-top: 10px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.62rem; color: rgba(255,255,255,0.25);
+    }
+    .quick-picks {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 10px; margin-top: 24px;
+    }
+    .quick-pick {
+      background: rgba(0,93,245,0.06);
+      border: 1px solid rgba(0,93,245,0.16);
+      border-radius: 8px; padding: 10px; text-align: center;
+      cursor: pointer; transition: all 0.2s;
+    }
+    .quick-pick:hover {
+      border-color: rgba(0,93,245,0.45);
+      background: rgba(0,93,245,0.14);
+    }
+    .qp-num {
+      font-family: 'Rajdhani', sans-serif; font-weight: 700;
+      font-size: 1.15rem; color: #7ab4ff; line-height: 1;
+    }
+    .qp-lbl {
+      font-size: 0.66rem; color: rgba(255,255,255,0.32); margin-top: 3px;
+    }
+
+    /* ── Result (step 4) ── */
+    .result-box {
+      background: rgba(8,5,24,0.92);
+      border: 2px solid #005df5; border-radius: 20px; padding: 36px;
+      text-align: center; position: relative; overflow: hidden;
+      box-shadow: 0 0 0 1px rgba(0,93,245,0.25), 0 0 60px rgba(0,93,245,0.18);
+    }
+    .result-box::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; height: 2px;
+      background: linear-gradient(90deg, #005df5, #6440e0);
+      box-shadow: 0 0 20px rgba(0,93,245,0.60);
+    }
+    .res-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: linear-gradient(135deg, #005df5, #6440e0);
+      color: #fff; padding: 7px 20px; border-radius: 9999px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.66rem; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; margin-bottom: 24px;
+      box-shadow: 0 4px 20px rgba(0,93,245,0.45);
+    }
+    .res-name {
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 2.4rem; font-weight: 700; color: #fff;
+      margin-bottom: 6px; line-height: 1;
+    }
+    .res-tag {
+      color: rgba(255,255,255,0.40); font-size: 0.9rem; margin-bottom: 28px;
+    }
+    .res-price {
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 3.2rem; font-weight: 700; color: #fff;
+      line-height: 1; margin-bottom: 28px;
+      text-shadow: 0 0 40px rgba(0,93,245,0.40);
+    }
+    .res-price span {
+      font-size: 1rem; color: rgba(255,255,255,0.38);
+      font-family: 'Inter', sans-serif; font-weight: 400;
+    }
+    .res-specs {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 10px; margin-bottom: 30px; text-align: left;
+    }
+    .res-spec {
+      display: flex; align-items: center; gap: 10px;
+      background: rgba(0,93,245,0.08);
+      border: 1px solid rgba(0,93,245,0.18);
+      border-radius: 8px; padding: 12px 14px;
+    }
+    .res-spec svg { color: #4d9fff; flex-shrink: 0; }
+    .res-k {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.58rem; color: rgba(255,255,255,0.30);
+      text-transform: uppercase; letter-spacing: 0.08em;
+    }
+    .res-v { font-size: 0.88rem; font-weight: 600; color: rgba(255,255,255,0.85); }
+    .res-actions {
+      display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;
+    }
+    .res-note {
+      font-size: 0.76rem; color: rgba(255,255,255,0.22);
+      margin-top: 18px; letter-spacing: 0.02em;
+    }
+    .res-extras {
+      margin-top: 28px; text-align: center;
+    }
+    .res-extras p {
+      color: rgba(255,255,255,0.32); font-size: 0.85rem; margin-bottom: 14px;
+    }
+    .res-extras-btns {
+      display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;
+    }
+    .restart-btn {
+      display: inline-flex; align-items: center; gap: 6px;
+      color: rgba(255,255,255,0.30); font-size: 0.82rem;
+      cursor: pointer; background: none; border: none;
+      font: inherit; margin-top: 16px; transition: color 0.2s;
+    }
+    .restart-btn:hover { color: rgba(255,255,255,0.60); }
+
+    /* ── Nav bar ── */
+    .wiz-nav-bar {
+      display: flex; justify-content: space-between; align-items: center;
+      margin-top: 40px; padding-top: 26px;
+      border-top: 1px solid rgba(0,93,245,0.14);
+    }
+    .wiz-back-btn {
+      display: flex; align-items: center; gap: 8px;
+      color: rgba(255,255,255,0.40); font-family: 'Rajdhani', sans-serif;
+      font-size: 0.95rem; font-weight: 600; letter-spacing: 0.04em;
+      cursor: pointer; background: none; border: none; font: inherit;
+      transition: color 0.2s;
+    }
+    .wiz-back-btn:hover  { color: rgba(255,255,255,0.78); }
+    .wiz-back-btn:disabled { opacity: 0; pointer-events: none; }
+    .wiz-hint-txt {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.63rem; color: rgba(255,255,255,0.20);
+      letter-spacing: 0.07em; text-align: center;
+    }
+
+    @media (max-width: 560px) {
+      .opt-grid { grid-template-columns: 1fr; }
+      .res-specs { grid-template-columns: 1fr; }
+      .wiz-lbl  { display: none; }
+      .wiz-progress::before, .wiz-track { display: none; }
+      .quick-picks { grid-template-columns: repeat(3,1fr); }
+    }
+  </style>
+</head>
+<body>
+
+<div id="scroll-bar" aria-hidden="true"></div>
+
+<nav class="nav" role="navigation" aria-label="Navegação principal">
+  <div class="nav-inner">
+
+    <!-- Logo -->
+    <a href="index.html" class="nav-logo" aria-label="End Hosting – Página inicial">
+      <div class="nav-logo-mark" aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/>
+          <line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/>
+        </svg>
+      </div>
+      <span class="nav-logo-text">End<span class="accent">Hosting</span></span>
+    </a>
+
+    <!-- Desktop links -->
+    <ul class="nav-links" role="list">
+      <li>
+        <a href="index.html" class="nav-link">Início</a>
+      </li>
+
+      <!-- Dropdown: Hospedagem de Minecraft -->
+      <li class="nav-dropdown">
+        <a href="minecraft.html" class="nav-link" tabindex="0" aria-haspopup="true" aria-expanded="false">
+          Minecraft
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </a>
+        <div class="dropdown-menu" role="menu">
+          <a href="minecraft.html" class="dropdown-item" role="menuitem">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Escolher Plano
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="planos-xeon.html" class="dropdown-item" role="menuitem">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3M3 3l18 0 0 18H3z"/></svg>
+            Planos Xeon
+          </a>
+          <a href="planos-ryzen7.html" class="dropdown-item" role="menuitem">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+            Planos Ryzen 7
+          </a>
+        </div>
+      </li>
+
+      <li><a href="sobre.html" class="nav-link">Sobre</a></li>
+      <li><a href="faq.html"   class="nav-link">FAQ</a></li>
+    </ul>
+
+    <!-- Actions -->
+    <div class="nav-actions">
+      <button class="theme-btn" onclick="toggleTheme()" aria-label="Alternar tema">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+
+      <a href="https://discord.gg/endhosting" target="_blank" rel="noopener" class="btn-discord" aria-label="Entrar no Discord da End Hosting">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.3 4.4A19.2 19.2 0 0 0 15.6 3c-.2.4-.5 1-.7 1.4a17.8 17.8 0 0 0-5.8 0C8.9 4 8.5 3.4 8.3 3A19 19 0 0 0 3.7 4.4C.5 9.4-.3 14.2.1 18.9a19.4 19.4 0 0 0 6 3c.5-.7 1-1.4 1.3-2.2-.7-.3-1.4-.6-2-1l.5-.4c3.8 1.8 8 1.8 11.8 0l.5.4c-.7.4-1.3.8-2 1 .3.8.8 1.5 1.3 2.2 2.2-.7 4.3-1.8 6-3 .5-5.4-.9-10.1-3.2-14.5zM8 15.5c-1.3 0-2.3-1.2-2.3-2.6 0-1.4 1-2.6 2.3-2.6s2.3 1.1 2.3 2.6c0 1.4-1 2.6-2.3 2.6zm7.9 0c-1.3 0-2.3-1.2-2.3-2.6 0-1.4 1-2.6 2.3-2.6s2.3 1.1 2.3 2.6c0 1.4-1 2.6-2.3 2.6z"/></svg>
+        Discord
+      </a>
+
+      <a href="minecraft.html" class="btn btn-primary btn-sm">Criar Servidor</a>
+
+      <button class="hamburger" aria-expanded="false" aria-label="Abrir menu" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Menu mobile">
+    <a href="index.html"         class="nav-link">Início</a>
+
+    <div class="nav-link" style="cursor:default;opacity:0.55;font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;font-family:'JetBrains Mono',monospace;padding:10px 16px 4px;">
+      Minecraft
+    </div>
+    <div class="mobile-sub">
+      <a href="minecraft.html"     class="nav-link">Escolher Plano</a>
+      <a href="planos-xeon.html"   class="nav-link">Planos Xeon</a>
+      <a href="planos-ryzen7.html" class="nav-link">Planos Ryzen 7</a>
+    </div>
+
+    <div class="mobile-menu-divider"></div>
+    <a href="sobre.html"           class="nav-link">Sobre</a>
+    <a href="faq.html"             class="nav-link">FAQ</a>
+
+    <a href="https://discord.gg/endhosting" target="_blank" rel="noopener" class="btn-discord">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.3 4.4A19.2 19.2 0 0 0 15.6 3c-.2.4-.5 1-.7 1.4a17.8 17.8 0 0 0-5.8 0C8.9 4 8.5 3.4 8.3 3A19 19 0 0 0 3.7 4.4C.5 9.4-.3 14.2.1 18.9a19.4 19.4 0 0 0 6 3c.5-.7 1-1.4 1.3-2.2-.7-.3-1.4-.6-2-1l.5-.4c3.8 1.8 8 1.8 11.8 0l.5.4c-.7.4-1.3.8-2 1 .3.8.8 1.5 1.3 2.2 2.2-.7 4.3-1.8 6-3 .5-5.4-.9-10.1-3.2-14.5zM8 15.5c-1.3 0-2.3-1.2-2.3-2.6 0-1.4 1-2.6 2.3-2.6s2.3 1.1 2.3 2.6c0 1.4-1 2.6-2.3 2.6zm7.9 0c-1.3 0-2.3-1.2-2.3-2.6 0-1.4 1-2.6 2.3-2.6s2.3 1.1 2.3 2.6c0 1.4-1 2.6-2.3 2.6z"/></svg>
+      Entrar no Discord
+    </a>
+  </nav>
+</nav>
+
+  <!-- ════════════════════════════════════════
+       WIZARD PAGE
+  ════════════════════════════════════════ -->
+
+  <main class="wiz-page">
+    <div class="wiz-inner">
+
+      <!-- Header -->
+      <div class="wiz-head">
+        <span class="label" style="display:block;margin-bottom:12px;">Seletor Inteligente de Planos</span>
+        <h1>Qual plano é <em id="wiz-tw">ideal para você?</em></h1>
+        <p>Responda 3 perguntas e encontraremos a hospedagem Minecraft perfeita para o seu servidor.</p>
+      </div>
+
+      <!-- Progress bar -->
+      <div class="wiz-progress" role="progressbar" aria-valuemin="1" aria-valuemax="4" aria-valuenow="1" aria-label="Progresso">
+        <div class="wiz-track" id="wiz-track"></div>
+
+        <button class="wiz-step-btn active" data-n="1" aria-label="Passo 1: Tipo de servidor">
+          <div class="wiz-circle">1</div>
+          <span class="wiz-lbl">Tipo</span>
+        </button>
+        <button class="wiz-step-btn" data-n="2" aria-label="Passo 2: Jogadores">
+          <div class="wiz-circle">2</div>
+          <span class="wiz-lbl">Jogadores</span>
+        </button>
+        <button class="wiz-step-btn" data-n="3" aria-label="Passo 3: Performance">
+          <div class="wiz-circle">3</div>
+          <span class="wiz-lbl">Performance</span>
+        </button>
+        <button class="wiz-step-btn" data-n="4" aria-label="Resultado">
+          <div class="wiz-circle">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.1 8.3 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 8.9 8.3 12 2"/></svg>
+          </div>
+          <span class="wiz-lbl">Resultado</span>
+        </button>
+      </div>
+
+      <!-- Panel container -->
+      <div class="wiz-panels">
+
+        <!-- STEP 1 -->
+        <section class="wiz-panel active" data-step="1">
+          <h2>O que você quer hospedar?</h2>
+          <p class="wiz-sub">Selecione o tipo de servidor Minecraft que melhor descreve o seu projeto.</p>
+          <div class="opt-grid" role="radiogroup">
+            <div class="opt-card" data-group="serverType" data-val="survival" role="radio" aria-checked="false" tabindex="0">
+              <div class="opt-icon-wrap">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              </div>
+              <div class="opt-title">Survival / SMP</div>
+              <p class="opt-desc">Sobrevivência, Semi-RP, RPG ou SMP para sua comunidade.</p>
+            </div>
+            <div class="opt-card" data-group="serverType" data-val="modpack" role="radio" aria-checked="false" tabindex="0">
+              <div class="opt-icon-wrap">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+              </div>
+              <div class="opt-title">Modpack</div>
+              <p class="opt-desc">RLCraft, SkyFactory, All the Mods, Create e outros packs.</p>
+            </div>
+            <div class="opt-card" data-group="serverType" data-val="network" role="radio" aria-checked="false" tabindex="0">
+              <div class="opt-icon-wrap">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="3"/><circle cx="5" cy="19" r="3"/><circle cx="19" cy="19" r="3"/><line x1="12" y1="8" x2="12" y2="14"/><line x1="12" y1="14" x2="5" y2="16.5"/><line x1="12" y1="14" x2="19" y2="16.5"/></svg>
+              </div>
+              <div class="opt-title">Network</div>
+              <p class="opt-desc">Múltiplos servidores com lobby, Survival, Minigames ou Factions.</p>
+            </div>
+            <div class="opt-card" data-group="serverType" data-val="minigames" role="radio" aria-checked="false" tabindex="0">
+              <div class="opt-icon-wrap">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="11" x2="10" y2="11"/><line x1="8" y1="9" x2="8" y2="13"/><line x1="15" y1="12" x2="15.01" y2="12"/><line x1="18" y1="10" x2="18.01" y2="10"/><path d="M17.3 5H6.7C4.1 5 2 7 2 9.5v5C2 17 4.1 19 6.7 19h10.6C19.9 19 22 17 22 14.5v-5C22 7 19.9 5 17.3 5z"/></svg>
+              </div>
+              <div class="opt-title">Minigames / PvP</div>
+              <p class="opt-desc">BedWars, SkyWars, UHC, Duels e modos competitivos.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- STEP 2 -->
+        <section class="wiz-panel" data-step="2">
+          <h2>Quantos jogadores simultâneos?</h2>
+          <p class="wiz-sub">Estime o pico máximo de jogadores online ao mesmo tempo.</p>
+          <div class="slider-block">
+            <div class="slider-num-big" id="wiz-num">20</div>
+            <div class="slider-unit">jogadores simultâneos</div>
+            <input type="range" class="wiz-range" id="wiz-slider" min="5" max="500" step="5" value="20" aria-label="Número de jogadores"/>
+            <div class="range-labels"><span>5</span><span>125</span><span>250</span><span>375</span><span>500+</span></div>
+            <div class="quick-picks">
+              <button class="quick-pick" data-v="20"><div class="qp-num">20</div><div class="qp-lbl">Amigos</div></button>
+              <button class="quick-pick" data-v="60"><div class="qp-num">60</div><div class="qp-lbl">Comunidade</div></button>
+              <button class="quick-pick" data-v="150"><div class="qp-num">150</div><div class="qp-lbl">Grande</div></button>
+            </div>
+          </div>
+        </section>
+
+        <!-- STEP 3 -->
+        <section class="wiz-panel" data-step="3">
+          <h2>Qual nível de performance?</h2>
+          <p class="wiz-sub">Escolha entre custo-benefício ou máxima velocidade single-thread.</p>
+          <div class="opt-grid" style="grid-template-columns:1fr 1fr;" role="radiogroup">
+            <div class="opt-card" data-group="perf" data-val="xeon" role="radio" aria-checked="false" tabindex="0" style="padding:28px 20px;">
+              <div class="opt-icon-wrap" style="width:64px;height:64px;">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3M3 3l18 0 0 18H3z"/></svg>
+              </div>
+              <div class="opt-title" style="font-size:1.1rem;">Intel Xeon</div>
+              <p class="opt-desc" style="margin-top:8px;">Melhor custo-benefício. DDR4 ECC, estável e confiável para a maioria dos servidores.</p>
+              <div class="opt-price">A PARTIR DE R$ 19,90/MÊS</div>
+            </div>
+            <div class="opt-card" data-group="perf" data-val="ryzen" role="radio" aria-checked="false" tabindex="0" style="padding:28px 20px;">
+              <div class="opt-icon-wrap" style="width:64px;height:64px;">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+              </div>
+              <div class="opt-title" style="font-size:1.1rem;">AMD Ryzen 7</div>
+              <p class="opt-desc" style="margin-top:8px;">Máxima performance. Clock 5,4 GHz + DDR5 + NVMe Gen4. Para quem não aceita lag.</p>
+              <div class="opt-price">A PARTIR DE R$ 59,90/MÊS</div>
+            </div>
+          </div>
+          <div style="background:rgba(0,93,245,0.06);border:1px solid rgba(0,93,245,0.16);border-radius:12px;padding:18px 22px;margin-top:-10px;">
+            <div style="font-family:'JetBrains Mono',monospace;font-size:0.62rem;color:#7ab4ff;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:8px;">Por que isso importa?</div>
+            <p style="color:rgba(255,255,255,0.50);font-size:0.85rem;line-height:1.70;margin:0;">O Minecraft Java depende de um único núcleo de CPU. O Ryzen 7 com 5,4 GHz mantém TPS próximo de 20 mesmo com centenas de jogadores. Para servidores menores, o Xeon é suficiente e mais econômico.</p>
+          </div>
+        </section>
+
+        <!-- STEP 4 (result rendered by JS) -->
+        <section class="wiz-panel" data-step="4">
+          <div id="wiz-result"></div>
+        </section>
+
+      </div><!-- /wiz-panels -->
+
+      <!-- Single nav bar (shared) -->
+      <div class="wiz-nav-bar">
+        <button class="wiz-back-btn" id="wiz-back" disabled>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+          Voltar
+        </button>
+        <span class="wiz-hint-txt" id="wiz-hint">Selecione uma opção para continuar</span>
+        <button class="btn btn-primary" id="wiz-next" style="display:none;">
+          Próximo
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </div>
+
+    </div><!-- /wiz-inner -->
+  </main>
+
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+
+      <!-- Brand -->
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo" style="display:inline-flex;" aria-label="End Hosting">
+          <div class="nav-logo-mark" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/>
+              <line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/>
+            </svg>
+          </div>
+          <span class="nav-logo-text">End<span class="accent">Hosting</span></span>
+        </a>
+        <p>Hospedagem de servidores Minecraft e VPS com a melhor infraestrutura do Brasil. Latência mínima, uptime máximo, suporte humano 24/7.</p>
+        <div class="footer-socials">
+          <a href="https://discord.gg/endhosting" target="_blank" rel="noopener" class="footer-soc" aria-label="Discord">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.3 4.4A19.2 19.2 0 0 0 15.6 3c-.2.4-.5 1-.7 1.4a17.8 17.8 0 0 0-5.8 0C8.9 4 8.5 3.4 8.3 3A19 19 0 0 0 3.7 4.4C.5 9.4-.3 14.2.1 18.9a19.4 19.4 0 0 0 6 3c.5-.7 1-1.4 1.3-2.2-.7-.3-1.4-.6-2-1l.5-.4c3.8 1.8 8 1.8 11.8 0l.5.4c-.7.4-1.3.8-2 1 .3.8.8 1.5 1.3 2.2 2.2-.7 4.3-1.8 6-3 .5-5.4-.9-10.1-3.2-14.5zM8 15.5c-1.3 0-2.3-1.2-2.3-2.6 0-1.4 1-2.6 2.3-2.6s2.3 1.1 2.3 2.6c0 1.4-1 2.6-2.3 2.6zm7.9 0c-1.3 0-2.3-1.2-2.3-2.6 0-1.4 1-2.6 2.3-2.6s2.3 1.1 2.3 2.6c0 1.4-1 2.6-2.3 2.6z"/></svg>
+          </a>
+          <a href="https://instagram.com/endhosting" target="_blank" rel="noopener" class="footer-soc" aria-label="Instagram">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.4a4 4 0 1 1-4.9-3.9 4 4 0 0 1 4.9 3.9z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://twitter.com/endhosting" target="_blank" rel="noopener" class="footer-soc" aria-label="Twitter/X">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l16 16M4 20L20 4"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Planos -->
+      <div class="footer-col">
+        <h5>Planos</h5>
+        <ul class="footer-links">
+          <li><a href="minecraft.html"     class="footer-link">Escolher Plano</a></li>
+          <li><a href="planos-xeon.html"   class="footer-link">Servidores Xeon</a></li>
+          <li><a href="planos-ryzen7.html" class="footer-link">Servidores Ryzen 7</a></li>
+          <li><a href="planos-xeon.html"   class="footer-link">VPS Linux</a></li>
+        </ul>
+      </div>
+
+      <!-- Empresa -->
+      <div class="footer-col">
+        <h5>Empresa</h5>
+        <ul class="footer-links">
+          <li><a href="sobre.html" class="footer-link">Sobre nós</a></li>
+          <li><a href="faq.html"   class="footer-link">FAQ</a></li>
+          <li><a href="#"          class="footer-link">Status</a></li>
+          <li><a href="#"          class="footer-link">Blog</a></li>
+        </ul>
+      </div>
+
+      <!-- Suporte -->
+      <div class="footer-col">
+        <h5>Suporte</h5>
+        <ul class="footer-links">
+          <li><a href="https://discord.gg/endhosting" target="_blank" rel="noopener" class="footer-link">Discord</a></li>
+          <li><a href="#" class="footer-link">Abrir ticket</a></li>
+          <li><a href="#" class="footer-link">Base de conhecimento</a></li>
+          <li><a href="#" class="footer-link">Painel de controle</a></li>
+        </ul>
+      </div>
+
+    </div><!-- /footer-grid -->
+
+    <div class="footer-bot">
+      <span class="footer-copy">© 2024 End Hosting · Todos os direitos reservados</span>
+      <div class="footer-links-bot">
+        <a href="#" class="footer-copy" style="text-decoration:underline">Termos de Uso</a>
+        <a href="#" class="footer-copy" style="text-decoration:underline">Privacidade</a>
+        <a href="#" class="footer-copy" style="text-decoration:underline">LGPD</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating Support Button -->
+<a href="https://discord.gg/endhosting" target="_blank" rel="noopener"
+   id="float-btn" class="float-btn" aria-label="Suporte via Discord">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.3 4.4A19.2 19.2 0 0 0 15.6 3c-.2.4-.5 1-.7 1.4a17.8 17.8 0 0 0-5.8 0C8.9 4 8.5 3.4 8.3 3A19 19 0 0 0 3.7 4.4C.5 9.4-.3 14.2.1 18.9a19.4 19.4 0 0 0 6 3c.5-.7 1-1.4 1.3-2.2-.7-.3-1.4-.6-2-1l.5-.4c3.8 1.8 8 1.8 11.8 0l.5.4c-.7.4-1.3.8-2 1 .3.8.8 1.5 1.3 2.2 2.2-.7 4.3-1.8 6-3 .5-5.4-.9-10.1-3.2-14.5zM8 15.5c-1.3 0-2.3-1.2-2.3-2.6 0-1.4 1-2.6 2.3-2.6s2.3 1.1 2.3 2.6c0 1.4-1 2.6-2.3 2.6zm7.9 0c-1.3 0-2.3-1.2-2.3-2.6 0-1.4 1-2.6 2.3-2.6s2.3 1.1 2.3 2.6c0 1.4-1 2.6-2.3 2.6z"/></svg>
+  <span class="fl-label">Suporte</span>
+</a>
+
+  <script src="js/script.js"></script>
+  <script>
+    /* ── Wizard state & logic ── */
+    const PLANS = {
+      xeon_starter:  { name:'Xeon Starter',  price:'19,90',  ram:'2 GB DDR4',  cpu:'Xeon · 2 vCPU',  disk:'15 GB NVMe',      players:'até 20',  badge:'Xeon', page:'planos-xeon.html'   },
+      xeon_standard: { name:'Xeon Standard', price:'39,90',  ram:'4 GB DDR4',  cpu:'Xeon · 4 vCPU',  disk:'30 GB NVMe',      players:'até 50',  badge:'Xeon', page:'planos-xeon.html'   },
+      xeon_advanced: { name:'Xeon Advanced', price:'69,90',  ram:'8 GB DDR4',  cpu:'Xeon · 6 vCPU',  disk:'60 GB NVMe',      players:'até 120', badge:'Xeon', page:'planos-xeon.html'   },
+      xeon_pro:      { name:'Xeon Pro',      price:'119,90', ram:'16 GB DDR4', cpu:'Xeon · 8 vCPU',  disk:'120 GB NVMe',     players:'250+',    badge:'Xeon', page:'planos-xeon.html'   },
+      ryzen_starter: { name:'Ryzen Starter', price:'59,90',  ram:'4 GB DDR5',  cpu:'Ryzen 7 · 2 vCPU', disk:'40 GB NVMe Gen4', players:'até 60',  badge:'Ryzen 7', page:'planos-ryzen7.html' },
+      ryzen_pro:     { name:'Ryzen Pro',     price:'99,90',  ram:'8 GB DDR5',  cpu:'Ryzen 7 · 4 vCPU', disk:'80 GB NVMe Gen4', players:'até 150', badge:'Ryzen 7', page:'planos-ryzen7.html' },
+      ryzen_elite:   { name:'Ryzen Elite',   price:'179,90', ram:'16 GB DDR5', cpu:'Ryzen 7 · 8 vCPU', disk:'160 GB NVMe Gen4', players:'300+',   badge:'Ryzen 7', page:'planos-ryzen7.html' },
+    };
+
+    function recommend(serverType, players, perf) {
+      /* Network and Modpack always benefit from Ryzen if they selected auto */
+      const forceRyzen = (serverType === 'network' || serverType === 'modpack') && perf === 'xeon' && players > 30;
+
+      if (perf === 'ryzen' || forceRyzen) {
+        if (players > 150) return 'ryzen_elite';
+        if (players > 60)  return 'ryzen_pro';
+        return 'ryzen_starter';
+      }
+      /* Xeon */
+      if (players <= 20)  return 'xeon_starter';
+      if (players <= 50)  return 'xeon_standard';
+      if (players <= 120) return 'xeon_advanced';
+      return 'xeon_pro';
+    }
+
+    function renderResult(plan) {
+      const el = document.getElementById('result-container');
+      if (!el) return;
+
+      el.innerHTML = `
+        <div class="result-wrap" role="region" aria-label="Plano recomendado">
+          <div class="result-badge-top">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.1 8.3 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 8.9 8.3 12 2"/></svg>
+            Plano Recomendado para Você
+          </div>
+
+          <div class="result-plan-name">${plan.name}</div>
+          <div class="result-plan-tag">Hardware ${plan.badge} · Data center São Paulo</div>
+
+          <div class="result-price-display">
+            R$&nbsp;${plan.price}<span>/mês</span>
+          </div>
+
+          <div class="result-specs-grid">
+            <div class="result-spec-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3"/></svg>
+              <div><div class="result-spec-k">Processador</div><div class="result-spec-v">${plan.cpu}</div></div>
+            </div>
+            <div class="result-spec-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.7 4 3 9 3s9-1.3 9-3V5M3 12c0 1.7 4 3 9 3s9-1.3 9-3"/></svg>
+              <div><div class="result-spec-k">Memória RAM</div><div class="result-spec-v">${plan.ram}</div></div>
+            </div>
+            <div class="result-spec-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/></svg>
+              <div><div class="result-spec-k">Armazenamento</div><div class="result-spec-v">${plan.disk}</div></div>
+            </div>
+            <div class="result-spec-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></svg>
+              <div><div class="result-spec-k">Jogadores</div><div class="result-spec-v">${plan.players}</div></div>
+            </div>
+          </div>
+
+          <div class="result-ctas">
+            <a href="${plan.page}" class="btn btn-primary btn-lg">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+              Contratar — R$&nbsp;${plan.price}/mês
+            </a>
+            <a href="${plan.page}" class="btn btn-ghost">
+              Ver todos os planos
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+            </a>
+
+  <script src="js/script.js"></script>
+  <script>
+  /* ════════════════════════════════════════
+     WIZARD — fully self-contained
+  ════════════════════════════════════════ */
+  (function() {
+    'use strict';
+
+    /* ── Plan data ── */
+    var PLANS = {
+      xeon_starter:  { name:'Xeon Starter',  price:'19,90',  ram:'2 GB DDR4',   cpu:'Intel Xeon · 2 vCPU',   disk:'15 GB NVMe',       players:'até 20',  badge:'Intel Xeon',   page:'planos-xeon.html'   },
+      xeon_standard: { name:'Xeon Standard', price:'39,90',  ram:'4 GB DDR4',   cpu:'Intel Xeon · 4 vCPU',   disk:'30 GB NVMe',       players:'até 50',  badge:'Intel Xeon',   page:'planos-xeon.html'   },
+      xeon_advanced: { name:'Xeon Advanced', price:'69,90',  ram:'8 GB DDR4',   cpu:'Intel Xeon · 6 vCPU',   disk:'60 GB NVMe',       players:'até 120', badge:'Intel Xeon',   page:'planos-xeon.html'   },
+      xeon_pro:      { name:'Xeon Pro',      price:'119,90', ram:'16 GB DDR4',  cpu:'Intel Xeon · 8 vCPU',   disk:'120 GB NVMe',      players:'250+',    badge:'Intel Xeon',   page:'planos-xeon.html'   },
+      ryzen_starter: { name:'Ryzen Starter', price:'59,90',  ram:'4 GB DDR5',   cpu:'AMD Ryzen 7 · 2 vCPU',  disk:'40 GB NVMe Gen4',  players:'até 60',  badge:'AMD Ryzen 7',  page:'planos-ryzen7.html' },
+      ryzen_pro:     { name:'Ryzen Pro',     price:'99,90',  ram:'8 GB DDR5',   cpu:'AMD Ryzen 7 · 4 vCPU',  disk:'80 GB NVMe Gen4',  players:'até 150', badge:'AMD Ryzen 7',  page:'planos-ryzen7.html' },
+      ryzen_elite:   { name:'Ryzen Elite',   price:'179,90', ram:'16 GB DDR5',  cpu:'AMD Ryzen 7 · 8 vCPU',  disk:'160 GB NVMe Gen4', players:'300+',    badge:'AMD Ryzen 7',  page:'planos-ryzen7.html' },
+    };
+
+    /* ── State ── */
+    var S = { step: 1, serverType: null, players: 20, perf: null };
+    var TOTAL = 4;
+
+    /* ── Recommend ── */
+    function recommend() {
+      var p = S.players, st = S.serverType, pf = S.perf;
+      var needRyzen = (pf === 'ryzen') || ((st === 'network' || st === 'modpack') && p > 30 && pf !== 'xeon');
+      if (pf === 'ryzen') needRyzen = true;
+      if (needRyzen) {
+        if (p > 150) return 'ryzen_elite';
+        if (p > 60)  return 'ryzen_pro';
+        return 'ryzen_starter';
+      }
+      if (p <= 20)  return 'xeon_starter';
+      if (p <= 50)  return 'xeon_standard';
+      if (p <= 120) return 'xeon_advanced';
+      return 'xeon_pro';
+    }
+
+    /* ── Track pct ── */
+    function trackPct() {
+      return ((S.step - 1) / (TOTAL - 1)) * 100;
+    }
+
+    /* ── Update slider UI ── */
+    function syncSlider() {
+      var sl = document.getElementById('wiz-slider');
+      var nm = document.getElementById('wiz-num');
+      if (!sl) return;
+      sl.value = S.players;
+      var pct = ((S.players - +sl.min) / (+sl.max - +sl.min)) * 100;
+      sl.style.background = 'linear-gradient(90deg,#005df5 ' + pct + '%,rgba(0,93,245,0.18) ' + pct + '%)';
+      if (nm) nm.textContent = S.players;
+    }
+
+    /* ── Render result ── */
+    function renderResult() {
+      var el = document.getElementById('wiz-result');
+      if (!el) return;
+      var key  = recommend();
+      var plan = PLANS[key];
+
+      var typeLabels = { survival:'Survival/SMP', modpack:'Modpack', network:'Network', minigames:'Minigames/PvP' };
+      var typeLabel  = typeLabels[S.serverType] || 'seu servidor';
+
+      el.innerHTML =
+        '<div class="result-box" role="region" aria-label="Plano recomendado">' +
+          '<div class="res-badge">' +
+            '<svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.1 8.3 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 8.9 8.3 12 2"/></svg>' +
+            'Plano ideal para voc&ecirc;' +
+          '</div>' +
+          '<div class="res-name">' + plan.name + '</div>' +
+          '<div class="res-tag">Hardware ' + plan.badge + ' &middot; Data center S&atilde;o Paulo</div>' +
+          '<div class="res-price">R$&nbsp;' + plan.price + '<span>/m&ecirc;s</span></div>' +
+          '<div class="res-specs">' +
+            '<div class="res-spec"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3"/></svg><div><div class="res-k">Processador</div><div class="res-v">' + plan.cpu + '</div></div></div>' +
+            '<div class="res-spec"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.7 4 3 9 3s9-1.3 9-3V5M3 12c0 1.7 4 3 9 3s9-1.3 9-3"/></svg><div><div class="res-k">Mem&oacute;ria RAM</div><div class="res-v">' + plan.ram + '</div></div></div>' +
+            '<div class="res-spec"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/></svg><div><div class="res-k">Armazenamento</div><div class="res-v">' + plan.disk + '</div></div></div>' +
+            '<div class="res-spec"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></svg><div><div class="res-k">Capacidade</div><div class="res-v">' + plan.players + '</div></div></div>' +
+          '</div>' +
+          '<div class="res-actions">' +
+            '<a href="' + plan.page + '" class="btn btn-primary btn-lg"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> Contratar este plano</a>' +
+            '<a href="' + plan.page + '" class="btn btn-ghost">Ver todos os planos</a>' +
+          '</div>' +
+          '<p class="res-note">Sem fidelidade &middot; Pix, cart&atilde;o ou boleto &middot; Suporte 24/7 em portugu&ecirc;s</p>' +
+        '</div>' +
+        '<div class="res-extras">' +
+          '<p>Prefere explorar todas as op&ccedil;&otilde;es?</p>' +
+          '<div class="res-extras-btns">' +
+            '<a href="planos-xeon.html" class="btn btn-dark">Planos Xeon</a>' +
+            '<a href="planos-ryzen7.html" class="btn btn-dark">Planos Ryzen 7</a>' +
+          '</div>' +
+          '<button class="restart-btn" id="wiz-restart"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-4.95"/></svg> Recomeçar</button>' +
+        '</div>';
+
+      /* Attach restart */
+      var rb = document.getElementById('wiz-restart');
+      if (rb) rb.addEventListener('click', restart);
+    }
+
+    /* ── Main UI update ── */
+    function updateUI() {
+      /* Panels */
+      document.querySelectorAll('.wiz-panel').forEach(function(p) {
+        p.classList.toggle('active', +p.dataset.step === S.step);
+      });
+
+      /* Step buttons */
+      document.querySelectorAll('.wiz-step-btn').forEach(function(btn) {
+        var n = +btn.dataset.n;
+        btn.classList.toggle('active', n === S.step);
+        btn.classList.toggle('done',   n < S.step);
+      });
+
+      /* Track */
+      var tr = document.getElementById('wiz-track');
+      if (tr) tr.style.width = trackPct() + '%';
+
+      /* Back */
+      var back = document.getElementById('wiz-back');
+      if (back) back.disabled = (S.step === 1);
+
+      /* Next — only show on step 2 */
+      var next = document.getElementById('wiz-next');
+      if (next) next.style.display = (S.step === 2) ? '' : 'none';
+
+      /* Hint text */
+      var hint = document.getElementById('wiz-hint');
+      if (hint) {
+        if (S.step === 1 || S.step === 3) hint.textContent = 'Clique numa opção para continuar';
+        else if (S.step === 2)            hint.textContent = 'Arraste o slider e clique "Próximo"';
+        else                              hint.textContent = '';
+      }
+
+      /* Slider sync */
+      syncSlider();
+
+      /* Render result on step 4 */
+      if (S.step === 4) renderResult();
+
+      /* aria */
+      var pb = document.querySelector('.wiz-progress');
+      if (pb) pb.setAttribute('aria-valuenow', S.step);
+    }
+
+    /* ── Navigate to step n ── */
+    function goTo(n, dir) {
+      if (n < 1 || n > TOTAL) return;
+      /* Add back animation class if going backwards */
+      if (dir === 'back') {
+        var panel = document.querySelector('.wiz-panel[data-step="' + n + '"]');
+        if (panel) {
+          panel.classList.add('back');
+          setTimeout(function() { panel.classList.remove('back'); }, 400);
+        }
+      }
+      S.step = n;
+      updateUI();
+      /* Scroll top of wizard into view smoothly */
+      var wh = document.querySelector('.wiz-head');
+      if (wh) wh.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    /* ── Restart ── */
+    function restart() {
+      S = { step: 1, serverType: null, players: 20, perf: null };
+      document.querySelectorAll('.opt-card').forEach(function(c) {
+        c.classList.remove('sel');
+        c.setAttribute('aria-checked', 'false');
+      });
+      goTo(1, 'back');
+    }
+
+    /* ── Option card clicks ── */
+    document.querySelectorAll('.opt-card').forEach(function(card) {
+      function select() {
+        var group = card.dataset.group;
+        var val   = card.dataset.val;
+        document.querySelectorAll('.opt-card[data-group="' + group + '"]').forEach(function(c) {
+          c.classList.remove('sel');
+          c.setAttribute('aria-checked', 'false');
+        });
+        card.classList.add('sel');
+        card.setAttribute('aria-checked', 'true');
+        if (group === 'serverType') S.serverType = val;
+        if (group === 'perf')       S.perf       = val;
+        setTimeout(function() {
+          if (S.step < TOTAL) goTo(S.step + 1);
+        }, 280);
+      }
+      card.addEventListener('click', select);
+      card.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); select(); }
+      });
+    });
+
+    /* ── Slider ── */
+    var sl = document.getElementById('wiz-slider');
+    if (sl) {
+      sl.addEventListener('input', function() {
+        S.players = +sl.value;
+        syncSlider();
+      });
+    }
+
+    /* ── Quick picks ── */
+    document.querySelectorAll('.quick-pick').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        S.players = +btn.dataset.v;
+        syncSlider();
+      });
+    });
+
+    /* ── Next / Back buttons ── */
+    var nextBtn = document.getElementById('wiz-next');
+    var backBtn = document.getElementById('wiz-back');
+    if (nextBtn) nextBtn.addEventListener('click', function() { goTo(S.step + 1); });
+    if (backBtn) backBtn.addEventListener('click', function() { goTo(S.step - 1, 'back'); });
+
+    /* ── Step button clicks (go back) ── */
+    document.querySelectorAll('.wiz-step-btn').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var n = +btn.dataset.n;
+        if (n < S.step) goTo(n, 'back');
+      });
+    });
+
+    /* ── Typewriter ── */
+    var twEl = document.getElementById('wiz-tw');
+    if (twEl) {
+      var phrases = ['ideal para você?', 'certo para seu servidor?', 'perfeito para sua network?', 'indicado para seu modpack?'];
+      var pi = 0, ci = 0, del = false;
+      function twTick() {
+        var phrase = phrases[pi];
+        if (!del) {
+          twEl.textContent = phrase.slice(0, ++ci);
+          if (ci === phrase.length) { del = true; return setTimeout(twTick, 2200); }
+          return setTimeout(twTick, 72);
+        }
+        twEl.textContent = phrase.slice(0, --ci);
+        if (ci === 0) { del = false; pi = (pi + 1) % phrases.length; return setTimeout(twTick, 320); }
+        setTimeout(twTick, 42);
+      }
+      setTimeout(twTick, 900);
+    }
+
+    /* ── Init ── */
+    updateUI();
+
+  })();
+  </script>
+</body>
+</html>
