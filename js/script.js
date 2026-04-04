@@ -307,7 +307,7 @@ function initParticles() {
 function initTypewriter() {
   const el = document.getElementById('typewriter');
   if (!el) return;
-  const words = ['Minecraft', 'Modpacks', 'Networks', 'VPS Linux', 'Bedrock'];
+  const words = ['Minecraft Java', 'Minecraft Bedrock', 'Modpacks', 'Networks', 'VPS Linux'];
   let wi = 0, ci = 0, del = false;
   function tick() {
     const w = words[wi];
