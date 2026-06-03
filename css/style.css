@@ -711,11 +711,6 @@ h4 { font-size: 1.1rem; font-weight: 700; }
   50%     { transform: translateY(-8px); }
 }
 
-@keyframes badge-float {
-  0%,100% { transform: translateX(-50%) translateY(0); }
-  50%     { transform: translateX(-50%) translateY(-6px); }
-}
-
 /* ============================================================
    SECTION HEADERS
    ============================================================ */
@@ -837,15 +832,15 @@ h4 { font-size: 1.1rem; font-weight: 700; }
    PLAN CARDS
    ============================================================ */
 .plans-grid {
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(268px, 1fr));
-  gap: 20px; align-items: start;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px; align-items: start;
 }
 
 .plan-card {
   background: var(--bg-surface);
   border: 1px solid var(--border);
   border-radius: var(--r-lg);
-  padding: 28px;
+  padding: 32px;
   position: relative; overflow: visible;
   transition: border-color var(--t), transform var(--t), box-shadow var(--t);
   background: linear-gradient(160deg, var(--bg-surface) 0%, var(--bg-card) 100%);
@@ -857,19 +852,22 @@ h4 { font-size: 1.1rem; font-weight: 700; }
   transform: scale(1.04);
   box-shadow: 0 0 0 1px var(--blue), 0 0 48px rgba(0,93,245,0.22), var(--shadow-lg);
 }
+.plan-card.featured::after {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 2px;
+  background: var(--grad);
+  box-shadow: 0 0 16px rgba(0,93,245,0.50);
+}
 .plan-card.featured:hover { transform: scale(1.04) translateY(-4px); }
 
 .plan-badge {
-  position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+  position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
   background: var(--grad);
-  color: #fff; padding: 6px 16px; border-radius: var(--r-full);
+  color: #fff; padding: 5px 18px; border-radius: var(--r-full);
   font-family: 'JetBrains Mono', monospace;
-  font-size: 0.65rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+  font-size: 0.64rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
   white-space: nowrap;
-  box-shadow: 0 4px 16px rgba(0,93,245,0.45);
-  z-index: 10;
-  pointer-events: none;
-  animation: badge-float 2.4s ease-in-out infinite;
+  box-shadow: var(--glow-btn);
 }
 
 .plan-type {
